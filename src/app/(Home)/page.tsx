@@ -365,7 +365,7 @@ export default function Page() {
         <Heart className="size-8" /> Donate
       </Button>
       </AOSWrapper>
-      <div className="h-[400px] w-full"></div>
+    
 
     </main>
   );

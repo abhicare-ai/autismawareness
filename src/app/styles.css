@@ -1,0 +1,129 @@
+/* indiaStyle.css */
+
+/* Default styling for all states */
+.india-map-wrapper svg .india-map-wrapper path {
+  stroke: #ffffff;
+  transition: fill 0.3s ease;
+}
+
+/* Specific fill colors for individual states */
+.india-map-wrapper path#IN-UP {
+  fill: #ff6b6b;
+} /* Uttar Pradesh */
+.india-map-wrapper path#IN-MH {
+  fill: #6bc1ff;
+} /* Maharashtra */
+.india-map-wrapper path#IN-BR {
+  fill: #ffd166;
+} /* Bihar */
+.india-map-wrapper path#IN-WB {
+  fill: #06d6a0;
+} /* West Bengal */
+.india-map-wrapper path#IN-MP {
+  fill: #8e44ad;
+} /* Madhya Pradesh */
+.india-map-wrapper path#IN-TN {
+  fill: #f67280;
+} /* Tamil Nadu */
+.india-map-wrapper path#IN-RJ {
+  fill: #ffa600;
+} /* Rajasthan */
+.india-map-wrapper path#IN-KA {
+  fill: #0096c7;
+} /* Karnataka */
+.india-map-wrapper path#IN-GJ {
+  fill: #2ec4b6;
+} /* Gujarat */
+.india-map-wrapper path#IN-AP {
+  fill: #ef476f;
+} /* Andhra Pradesh */
+.india-map-wrapper path#IN-OR {
+  fill: #06d6a0;
+} /* Odisha */
+.india-map-wrapper path#IN-TG {
+  fill: #f9844a;
+} /* Telangana */
+.india-map-wrapper path#IN-KL {
+  fill: #118ab2;
+} /* Kerala */
+.india-map-wrapper path#IN-JH {
+  fill: #073b4c;
+} /* Jharkhand */
+.india-map-wrapper path#IN-AS {
+  fill: #90be6d;
+} /* Assam */
+.india-map-wrapper path#IN-PB {
+  fill: #ff9f1c;
+} /* Punjab */
+.india-map-wrapper path#IN-CT {
+  fill: #9d4edd;
+} /* Chhattisgarh */
+.india-map-wrapper path#IN-HR {
+  fill: #6a4c93;
+} /* Haryana */
+.india-map-wrapper path#IN-JK {
+  fill: #118ab2;
+} /* Jammu & Kashmir */
+.india-map-wrapper path#IN-UT {
+  fill: #f94144;
+} /* Uttarakhand */
+.india-map-wrapper path#IN-HP {
+  fill: #f8961e;
+} /* Himachal Pradesh */
+.india-map-wrapper path#IN-TR {
+  fill: #43aa8b;
+} /* Tripura */
+.india-map-wrapper path#IN-ML {
+  fill: #3a86ff;
+} /* Meghalaya */
+.india-map-wrapper path#IN-MN {
+  fill: #8338ec;
+} /* Manipur */
+.india-map-wrapper path#IN-NL {
+  fill: #ff006e;
+} /* Nagaland */
+.india-map-wrapper path#IN-AR {
+  fill: #9a031e;
+} /* Arunachal Pradesh */
+.india-map-wrapper path#IN-MZ {
+  fill: #fb5607;
+} /* Mizoram */
+.india-map-wrapper path#IN-SK {
+  fill: #4cc9f0;
+} /* Sikkim */
+.india-map-wrapper path#IN-GA {
+  fill: #3a0ca3;
+} /* Goa */
+.india-map-wrapper path#IN-DL {
+  fill: #ffbe0b;
+} /* Delhi */
+.india-map-wrapper path#IN-PY {
+  fill: #7209b7;
+} /* Puducherry */
+.india-map-wrapper path#IN-CH {
+  fill: #3c096c;
+} /* Chandigarh */
+.india-map-wrapper path#IN-AN {
+  fill: #588157;
+} /* Andaman & Nicobar */
+.india-map-wrapper path#IN-LD {
+  fill: #ef476f;
+} /* Lakshadweep */
+.india-map-wrapper path#IN-DN {
+  fill: #06d6a0;
+}
+
+/* Daman & Diu & Dadra Nagar Haveli */
+.lginBody {
+  background-color: #1e1e2f;
+  background-image: repeating-linear-gradient(
+    60deg,
+    #2e2e3f 0px,
+    #2e2e3f 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+.texthsadow {
+  text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.5);
+}

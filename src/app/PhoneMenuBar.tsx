@@ -174,14 +174,7 @@ export default function MenuBar() {
                           Insurance
                         </Link>
                       </li>
-                      <li>
-                        <Link
-                          href="/caregiver-skills-training"
-                          className="hover:underline"
-                        >
-                          Caregiver Skills Training (CST)
-                        </Link>
-                      </li>
+                   
                     </ul>
                   </div>
                 </div>
@@ -191,61 +184,7 @@ export default function MenuBar() {
               </div>
             </div>
 
-            <div className="group relative flex h-[100px] cursor-pointer items-center gap-3">
-              Help & information <span>|</span>
-              <p className="bg-primary absolute bottom-8 left-0 h-1 w-0 rounded-md duration-300 group-hover:right-0 group-hover:w-full"></p>
-              <div className="bg-card absolute top-full left-1/2 z-20 mx-auto max-w-7xl origin-top -translate-x-1/2 scale-y-0 cursor-default space-y-5 duration-300 group-hover:scale-y-100">
-                <div className="flex gap-5 p-3">
-                  {/* Column 1 */}
-                  <div className="flex min-w-[220px] flex-col gap-2">
-                    <ul className="text-primary space-y-2">
-                      <li>
-                        <Link
-                          href="/information-topic"
-                          className="hover:underline"
-                        >
-                          Information by topic
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="bg-primary w-px"></div>
-
-                  {/* Column 2 */}
-                  <div className="flex min-w-[220px] flex-col gap-2">
-                    <ul className="text-primary space-y-2">
-                      <li>
-                        <Link href="/directory" className="hover:underline">
-                          Directory
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="bg-primary w-px"></div>
-
-                  {/* Column 3 */}
-                  <div className="flex min-w-[220px] flex-col gap-2">
-                    <ul className="text-primary space-y-2">
-                      <li>
-                        <Link
-                          href="/resource-guide"
-                          className="hover:underline"
-                        >
-                          Resource Guide
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Bottom bar */}
-                <div className="bg-primary absolute bottom-0 left-0 h-1.5 w-full"></div>
-              </div>
-            </div>
+        
 
             <div className="group relative flex h-[100px] cursor-pointer items-center gap-3">
               Our work <span>|</span>
@@ -272,10 +211,10 @@ export default function MenuBar() {
                       </li>
                       <li>
                         <Link
-                          href="/our-grantmaking"
+                          href="/contact-us"
                           className="hover:underline"
                         >
-                          Our grantmaking
+                          Contact us
                         </Link>
                       </li>
                     </ul>
@@ -287,14 +226,7 @@ export default function MenuBar() {
                   {/* Column 2 */}
                   <div className="flex min-w-[220px] flex-col gap-3">
                     <ul className="text-primary space-y-2">
-                      <li>
-                        <Link
-                          href="/research-programs"
-                          className="hover:underline"
-                        >
-                          Research programs
-                        </Link>
-                      </li>
+                      
                       <li>
                         <Link
                           href="/autism-by-the-numbers"
@@ -386,10 +318,7 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         { href: "/autism-therapies", label: "Interventions" },
         { href: "/access-services", label: "Access services" },
         { href: "/insurance", label: "Insurance" },
-        {
-          href: "/caregiver-skills-training",
-          label: "Caregiver Skills Training (CST)",
-        },
+       
       ],
     },
 
@@ -407,8 +336,8 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         { href: "/our-mission", label: "Our mission" },
         { href: "/our-impact", label: "Our impact" },
         { href: "/news", label: "News" },
-        { href: "/our-grantmaking", label: "Our grantmaking" },
-        { href: "/research-programs", label: "Research programs" },
+        { href: "/contact-us", label: "Contect" },
+      
         { href: "/autism-by-the-numbers", label: "Autism by the Numbers" },
       ],
     },
