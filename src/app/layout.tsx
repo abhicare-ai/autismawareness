@@ -6,6 +6,7 @@ import MenuBar, { PhoneMenuBar } from "./PhoneMenuBar";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "./Footer";
 import DonationButton from "@/components/DonationButton";
+import { Suspense } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,14 +26,15 @@ export default function RootLayout({
       <body className={inter.className}>
         <TopHeader />
         <MenuBar />
-        <PhoneMenuBar />
+        <Suspense fallback={null}>
+          <PhoneMenuBar />
+        </Suspense>
+
         {children}
-        <DonationButton/>
-        <Footer/>
+        <DonationButton />
+        <Footer />
         <Toaster />
       </body>
     </html>
   );
 }
-
-
