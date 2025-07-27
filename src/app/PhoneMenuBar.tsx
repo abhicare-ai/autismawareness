@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDown, Heart, MapPin, Menu, Search } from "lucide-react";
+import { ChevronDown, Heart, Menu } from "lucide-react";
 import Image from "next/image";
 import logo from "@/assets/web_logo_2.png";
 import { Button } from "@/components/ui/button";
@@ -300,8 +300,6 @@ export function PhoneMenuBar() {
           <Image src={logo} width={200} alt="logo" />
         </Link>
         <div className="flex items-center gap-3">
-          <MapPin className="cursor-pointer" />
-          <Search className="cursor-pointer" />
           <Button>
             <Heart /> Donate Now
           </Button>
@@ -381,6 +379,13 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
           </SheetDescription>
         </SheetHeader>
 
+        <Button
+          variant="outline"
+          className="w-full justify-between rounded-none"
+          asChild
+        >
+          <Link href={"/"}>Home</Link>
+        </Button>
         {/* 💡 Move the custom menu list OUTSIDE SheetDescription */}
         <div className="flex flex-col gap-3">
           {sections.map((section) => (
