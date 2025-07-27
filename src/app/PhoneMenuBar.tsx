@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "@/assets/web_logo_2.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -12,6 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export default function MenuBar() {
   return (
@@ -292,6 +293,11 @@ export default function MenuBar() {
 
 export function PhoneMenuBar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname, searchParams]);
   return (
     <>
       <div className="flex items-center justify-between gap-5 p-3 lg:hidden">
