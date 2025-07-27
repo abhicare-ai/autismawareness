@@ -18,15 +18,44 @@ export default function MenuBar() {
     <menu className="bg-card hidden w-full lg:block">
       <div className="mx-auto max-w-7xl p-3">
         <div className="flex justify-center gap-5">
-          <p>About us</p> |<p>Common misconceptions</p> |<p>Blog</p> |
-          <p>Events</p> |
           <p>
-            <MapPin className="cursor-pointer" />
+            <Link
+              href={"/about-us"}
+              className="hover:text-primary hover:underline"
+            >
+              About us
+            </Link>{" "}
+          </p>{" "}
+          |{" "}
+          <p>
+            <Link
+              href={"/autism-speaks-controversy"}
+              className="hover:text-primary hover:underline"
+            >
+              Common misconceptions
+            </Link>{" "}
           </p>{" "}
           |
           <p>
-            <Search className="cursor-pointer" />
-          </p>
+            <a
+              href={
+                "https://www.drrajeevswellness.com/product-category/autism-care/"
+              }
+              target="_blank"
+              className="hover:text-primary hover:underline"
+            >
+              Buy autism wellness products
+            </a>{" "}
+          </p>{" "}
+          |
+          <p>
+            <Link
+              href={"/events"}
+              className="hover:text-primary hover:underline"
+            >
+              Events
+            </Link>{" "}
+          </p>{" "}
         </div>
 
         <div className="flex items-center justify-between gap-5">
@@ -35,6 +64,13 @@ export default function MenuBar() {
             <Image src={logo} width={200} alt="logo" />
           </Link>
           <div className="flex items-center gap-5">
+            <div className="group relative ">
+              <Link href={"/"} className="flex cursor-pointer items-center gap-3">
+                {" "}
+                Home <span>|</span>
+              </Link>
+              <p className="bg-primary absolute -bottom-3 left-0 h-1 w-0 rounded-md duration-300 group-hover:right-0 group-hover:w-full"></p>
+            </div>
             <div className="group relative flex h-[100px] cursor-pointer items-center gap-3">
               What is autism? <span>|</span>
               <p className="bg-primary absolute bottom-8 left-0 h-1 w-0 rounded-md duration-300 group-hover:right-0 group-hover:w-full"></p>
@@ -174,7 +210,6 @@ export default function MenuBar() {
                           Insurance
                         </Link>
                       </li>
-                   
                     </ul>
                   </div>
                 </div>
@@ -183,8 +218,6 @@ export default function MenuBar() {
                 <div className="bg-primary absolute bottom-0 left-0 h-1.5 w-full"></div>
               </div>
             </div>
-
-        
 
             <div className="group relative flex h-[100px] cursor-pointer items-center gap-3">
               Our work <span>|</span>
@@ -210,10 +243,7 @@ export default function MenuBar() {
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          href="/contact-us"
-                          className="hover:underline"
-                        >
+                        <Link href="/contact-us" className="hover:underline">
                           Contact us
                         </Link>
                       </li>
@@ -226,7 +256,6 @@ export default function MenuBar() {
                   {/* Column 2 */}
                   <div className="flex min-w-[220px] flex-col gap-3">
                     <ul className="text-primary space-y-2">
-                      
                       <li>
                         <Link
                           href="/autism-by-the-numbers"
@@ -318,7 +347,6 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         { href: "/autism-therapies", label: "Interventions" },
         { href: "/access-services", label: "Access services" },
         { href: "/insurance", label: "Insurance" },
-       
       ],
     },
 
@@ -337,7 +365,7 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         { href: "/our-impact", label: "Our impact" },
         { href: "/news", label: "News" },
         { href: "/contact-us", label: "Contect" },
-      
+
         { href: "/autism-by-the-numbers", label: "Autism by the Numbers" },
       ],
     },

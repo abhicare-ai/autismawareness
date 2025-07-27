@@ -5,6 +5,7 @@ import TopHeader from "./TopHeader";
 import MenuBar, { PhoneMenuBar } from "./PhoneMenuBar";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "./Footer";
+import DonationButton from "@/components/DonationButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
         <MenuBar />
         <PhoneMenuBar />
         {children}
+        <DonationButton/>
         <Footer/>
         <Toaster />
       </body>
