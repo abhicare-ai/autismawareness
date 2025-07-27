@@ -64,8 +64,11 @@ export default function MenuBar() {
             <Image src={logo} width={200} alt="logo" />
           </Link>
           <div className="flex items-center gap-5">
-            <div className="group relative ">
-              <Link href={"/"} className="flex cursor-pointer items-center gap-3">
+            <div className="group relative">
+              <Link
+                href={"/"}
+                className="flex cursor-pointer items-center gap-3"
+              >
                 {" "}
                 Home <span>|</span>
               </Link>
@@ -326,8 +329,8 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         // Column 1: Learn the signs
         { href: "/signs-autism", label: "Learn the signs" },
         { href: "/what-autism", label: "What is autism?" },
-        { href: "/symptoms-of-autism", label: "Symptoms of autism" },
-        { href: "/what-causes-autism", label: "What causes autism?" },
+        { href: "/symptoms-of-autism", label: " Symptoms of autism" },
+        { href: "/what-causes-autism", label: " What causes autism?" },
         { href: "/asperger-syndrome", label: "Asperger syndrome" },
         { href: "/autism-statistics", label: "Autism statistics and facts" },
 
@@ -347,15 +350,6 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         { href: "/autism-therapies", label: "Interventions" },
         { href: "/access-services", label: "Access services" },
         { href: "/insurance", label: "Insurance" },
-      ],
-    },
-
-    {
-      title: "Help & Information",
-      links: [
-        { href: "/information-topic", label: "Information by topic" },
-        { href: "/directory", label: "Directory" },
-        { href: "/resource-guide", label: "Resource Guide" },
       ],
     },
     {
@@ -431,20 +425,38 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         <Button
           variant="outline"
           className="w-full justify-between rounded-none"
+          asChild
         >
-          pal
+          <Link href={"/about-us"}>About us</Link>
         </Button>
         <Button
           variant="outline"
           className="w-full justify-between rounded-none"
+          asChild
         >
-          pal
+          <Link href={"/autism-speaks-controversy"}>Common misconceptions</Link>
         </Button>
         <Button
           variant="outline"
           className="w-full justify-between rounded-none"
+          asChild
         >
-          pal
+          <a
+            href={
+              "https://www.drrajeevswellness.com/product-category/autism-care/"
+            }
+            target="_blank"
+          >
+            Buy autism wellness products
+          </a>
+        </Button>
+
+        <Button
+          variant="outline"
+          className="w-full justify-between rounded-none"
+          asChild
+        >
+          <Link href={"/events"}>Events</Link>
         </Button>
       </SheetContent>
     </Sheet>
