@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <TopHeader />
         <MenuBar />
-        <Suspense fallback={null}>
+        <Suspense >
           <PhoneMenuBar />
         </Suspense>
 
