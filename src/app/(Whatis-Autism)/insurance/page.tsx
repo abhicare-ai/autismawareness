@@ -1,5 +1,6 @@
 import AOSWrapper from "@/components/AOSWrapper";
 import Budge from "@/components/Budge";
+import Heading, { ListTag, Paragraph } from "@/components/Heading";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,68 +13,57 @@ export default function Page() {
       <AOSWrapper>
         <Budge>Health insurance coverage for autism</Budge>
         <div className="mx-auto max-w-7xl space-y-3 px-3">
-          <p
-            className="text-muted-foreground pt-4 text-2xl font-bold"
-            data-aos="fade-right"
-          >
+          <Heading>
             Autism Speaks Advocacy on health insurance coverage of autism
             therapies
-          </p>
+          </Heading>
 
-          <p>
+          <Paragraph>
             At least 200 million people now have health insurance coverage for
             ABA due to our efforts and dedicated advocates across the country.
-          </p>
-          <p>
+          </Paragraph>
+          <Paragraph>
             Over the last decade, the Autism Speaks advocacy team has focused on
             improving health insurance coverage for medically necessary
             treatments such as Applied Behavior Analysis (ABA).
-          </p>
-          <p>
+          </Paragraph>
+          <Paragraph>
             Health insurance can be very complicated. The time and energy often
             needed to ensure that prescribed treatments are covered can
             complicate what may already be a stressful time for families faced
             with a diagnosis of autism.
-          </p>
+          </Paragraph>
           <p className="font-bold">We are here to help.</p>
-          <p>
+          <Paragraph>
             Our online resources and staff can help you determine if your health
             benefit plan provides meaningful coverage for the treatment of
             autism. We can also assist with effective implementation and
             enforcement of the benefits to which you are entitled.
-          </p>
-          <p
-            className="text-muted-foreground pt-6 text-2xl font-bold"
-            data-aos="fade-right"
-          >
-            Health benefit plans
-          </p>
+          </Paragraph>
+          <Heading>Health benefit plans</Heading>
 
-          <p data-aos="fade-left">
+          <Paragraph>
             The first question we need to ask is, “Which type of health benefit
             plan do you have?”
-          </p>
-          <p>
+          </Paragraph>
+          <Paragraph>
             If you don’t already know what type of health benefit plan you have,
             please refer to our Health Benefits Guide. If you have trouble or
             need additional information, contact us at
             advocacy@autismspeaks.org.
-          </p>
-          <p>
+          </Paragraph>
+          <Paragraph>
             Once you have confirmed your plan type, find more information on
             your plan&lsquo;s page in the sidebar on the left.
-          </p>
+          </Paragraph>
 
-          <p
-            className="text-muted-foreground pt-6 text-2xl font-bold"
-            data-aos="fade-right"
-          >
+          <Heading>
             Why do I need to know the type of health benefit plan I have?
-          </p>
+          </Heading>
           <p className="font-bold">
             Your type of plan determines which health benefits must be covered.
           </p>
-          <ul className="list-inside list-disc" data-aos="fade-left">
+          <ListTag>
             <li>
               Some plan types (e.g., “fully insured plans”) must provide
               benefits directed by state law while other plan types do not.
@@ -87,7 +77,7 @@ export default function Page() {
               plans do not. Self-funded plans are regulated by federal law – not
               state law.
             </li>
-          </ul>
+          </ListTag>
         </div>
       </AOSWrapper>
     </main>

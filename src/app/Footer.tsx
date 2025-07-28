@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import "./styles.css"; // Optional: if you have custom CSS
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
@@ -8,30 +8,13 @@ const sections = [
   {
     title: "What is autism?",
     links: [
+      // Column 1: Learn the signs
       { href: "/signs-autism", label: "Learn the signs" },
       { href: "/what-autism", label: "What is autism?" },
-      { href: "/symptoms-of-autism", label: "Symptoms of autism" },
-      { href: "/what-causes-autism", label: "What causes autism?" },
+      { href: "/symptoms-of-autism", label: " Symptoms of autism" },
+      { href: "/what-causes-autism", label: " What causes autism?" },
       { href: "/asperger-syndrome", label: "Asperger syndrome" },
       { href: "/autism-statistics", label: "Autism statistics and facts" },
-      { href: "/autism-screening", label: "Learn about screening" },
-      { href: "/screening-questionnaire", label: "Screening questionnaire" },
-      { href: "/first-concern", label: "First Concern to Action" },
-      { href: "/dsm-5-diagnosis", label: "Autism diagnostic criteria: DSM-5" },
-      { href: "/newly-diagnosed", label: "Newly diagnosed" },
-      { href: "/sensory-issues", label: "Sensory issues" },
-      { href: "/mental-health", label: "Mental health" },
-      { href: "/autism-therapies", label: "Interventions" },
-      { href: "/access-services", label: "Access services" },
-      { href: "/insurance", label: "Insurance" },
-    ],
-  },
-  {
-    title: "Help & Information",
-    links: [
-      { href: "/information-topic", label: "Information by topic" },
-      { href: "/directory", label: "Directory" },
-      { href: "/resource-guide", label: "Resource Guide" },
     ],
   },
   {
@@ -40,25 +23,17 @@ const sections = [
       { href: "/our-mission", label: "Our mission" },
       { href: "/our-impact", label: "Our impact" },
       { href: "/news", label: "News" },
-      { href: "/contact-us", label: "Contact" },
+      { href: "/contact-us", label: "Contect" },
+
       { href: "/autism-by-the-numbers", label: "Autism by the Numbers" },
-    ],
-  },
-  {
-    title: "Quick Links",
-    links: [
-      { href: "/about", label: "About Us" },
-      { href: "/events", label: "Events" },
-      { href: "/blog", label: "Blog" },
-      { href: "/donate", label: "Donate" },
     ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t border text-sm text-white lginBody">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+    <footer className="lginBody mt-12 border border-t text-sm text-white">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-10 sm:grid-cols-2 md:grid-cols-3">
         {sections.map((section) => (
           <div key={section.title}>
             <h4 className="mb-3 text-base font-semibold">{section.title}</h4>
@@ -84,8 +59,7 @@ export default function Footer() {
             Subscribe to our newsletter
           </p>
           <form className="flex flex-col gap-2">
-            
-            <Input   placeholder="Your email address" />
+            <Input placeholder="Your email address" />
           </form>
           <div className="mt-4 flex gap-4 text-gray-400">
             <a
@@ -105,7 +79,7 @@ export default function Footer() {
               <Twitter />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/dr.rajeevclinic/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -113,7 +87,7 @@ export default function Footer() {
               <Instagram />
             </a>
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@DrRajeevsHomeopathyClinic"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -124,8 +98,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-800 py-5 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Autism Awareness. All rights reserved.
+      <div className="border-t border-gray-800 py-5 text-center text-xs text-primary">
+        © {new Date().getFullYear()} Abhi Homeo Hall. All rights reserved.
       </div>
     </footer>
   );

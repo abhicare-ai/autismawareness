@@ -1,5 +1,6 @@
 import AOSWrapper from "@/components/AOSWrapper";
 import Budge from "@/components/Budge";
+import Heading, { ListTag, Paragraph } from "@/components/Heading";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export default function Page() {
         <Budge>Autism Speaks controversy</Budge>
         <div className="mx-auto max-w-7xl space-y-3 px-3">
           {/* How do I get my child screened for autism? */}
-          <p data-aos="fade-right">
+          <Paragraph>
             Today, misconceptions around autism threaten access to vital
             information, resources and support that autistic people and their
             families need. While we recognize that autism is incredibly complex
@@ -21,35 +22,29 @@ export default function Page() {
             a convener and conveyor of vital resources for the entire
             community—and misinformation on the internet acts as an unwanted
             barrier to achieving that goal.
-          </p>
-          <p
-            className="text-muted-foreground text-3xl font-bold"
-            data-aos="fade-right"
+          </Paragraph>
+          <Heading
           >
             Setting the record straight
-          </p>
-          <p data-aos="fade-left">
+          </Heading>
+          <Paragraph>
             We’re setting the record straight, because misinformation – about
             past Autism Speaks controversies and autism in general – is
             dangerous for us all, and the autistic community deserves to know
             the truth.
-          </p>
-          <p
-            className="text-muted-foreground text-3xl font-bold"
-            data-aos="fade-right"
+          </Paragraph>
+          <Heading
           >
             What is the criticism of Autism Speaks?
-          </p>
+          </Heading>
 
-          <p
-            className="text-muted-foreground text-3xl font-bold"
-            data-aos="fade-right"
+          <Heading
           >
             We invite you to learn more about a few popular topics generating
             conversation online and our point of view around each of them:
-          </p>
+          </Heading>
 
-          <ul className="list-inside list-disc" data-aos="fade-right">
+          <ListTag>
             <li>Our evolution</li>
             <li>Autistic representation</li>
             <li>Community input and conversations</li>
@@ -59,19 +54,17 @@ export default function Page() {
             <li>Research and eugenics</li>
             <li>Puzzle piece logo</li>
             <li>“I am Autism” video</li>
-          </ul>
+          </ListTag>
 
-          <p
-            className="text-muted-foreground text-3xl font-bold"
-            data-aos="fade-right"
+          <Heading
           >
             Consider the facts
-          </p>
-          <p>
+          </Heading>
+          <Paragraph>
             Help us stop the spread of misinformation.{" "}
             <strong>Share this Autismawareness on social media</strong> to show
             your support.
-          </p>
+          </Paragraph>
         </div>
       </AOSWrapper>
     </main>

@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { explore } from "./list";
 import CardItem from "@/components/CardItem";
 import AOSWrapper from "@/components/AOSWrapper";
+import Heading, { Paragraph } from "@/components/Heading";
 
 export const metadata: Metadata = {
   title: "Our mission",
@@ -24,16 +25,16 @@ export default function Page() {
               className="mx-auto"
               data-aos="fade-down"
             />
-            <p data-aos="fade-right">
+            <Paragraph>
               Autism Speaks is dedicated to creating an inclusive world for all
               individuals with autism throughout their lifespan. We do this
               through advocacy, services, supports, research and innovation, and
               advances in care for autistic individuals and their families.
-            </p>
+            </Paragraph>
             <iframe
               data-aos="fade-left"
               className="h-[540px] w-full"
-              src="https://www.youtube.com/embed/bja70QQdfrE?si=FB7UfV-wYstrVyEJ"
+              src="https://www.youtube.com/embed/zwbWatORxAM?si=quhCjRZdb2qyBBMs"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -42,13 +43,10 @@ export default function Page() {
             ></iframe>
           </div>
           <div className="mx-auto max-w-7xl space-y-10 px-3">
-            <p
-              className="text-muted-foreground text-3xl font-bold"
-              data-aos="fade-right"
-            >
+            <Heading>
               Explore the links below to learn more about our work toward each
               of our mission objectives:
-            </p>
+            </Heading>
             <div className="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3">
               {explore.map((v) => (
                 <CardItem cardDeta={v} key={v.id} />

@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDown, Heart, Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import Image from "next/image";
 import logo from "@/assets/web_logo_2.png";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { usePathname, useSearchParams } from "next/navigation";
+import DonationButton from "@/components/DonationButton";
 
 export default function MenuBar() {
   return (
@@ -282,9 +283,7 @@ export default function MenuBar() {
               <p className="bg-primary absolute -bottom-3 left-0 h-1 w-0 rounded-md duration-300 group-hover:right-0 group-hover:w-full"></p>
             </div>
           </div>
-          <Button>
-            <Heart /> Donate Now
-          </Button>
+          <DonationButton />
         </div>
       </div>
     </menu>
@@ -306,9 +305,7 @@ export function PhoneMenuBar() {
           <Image src={logo} width={200} alt="logo" />
         </Link>
         <div className="flex items-center gap-3">
-          <Button>
-            <Heart /> Donate Now
-          </Button>
+          <DonationButton />
           <Menu
             className="size-8 cursor-pointer"
             onClick={() => setOpen(true)}

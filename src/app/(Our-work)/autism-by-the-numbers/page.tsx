@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CardItem from "@/components/CardItem";
 import { autismNumber } from "./[id]/lis";
+import Heading, { ListTag } from "@/components/Heading";
 
 export const metadata: Metadata = {
   title: "Autism by the numbers",
@@ -82,19 +83,14 @@ export default function Page() {
               </div>
             </div>
             <div className="mx-auto max-w-7xl space-y-3 px-3">
-              <p
-                className="text-muted-foreground text-3xl font-bold"
-                data-aos="fade-right"
-              >
-                How can Autism by the Numbers help?
-              </p>
+              <Heading>How can Autism by the Numbers help?</Heading>
               <p data-aos="fade-left">
                 For the first time, you can get a view of each select autism
                 laws and policies, services and outcomes from each state in a
                 single Dashboard. The Dashboard is organized by life stage and
                 covers topics like:
               </p>
-              <ul className="list-inside list-disc">
+              <ListTag>
                 <li data-aos="fade-right">Diagnosis</li>
                 <li data-aos="fade-left">Special education</li>
                 <li data-aos="fade-right">Healthcare costs</li>
@@ -102,7 +98,7 @@ export default function Page() {
                 <li data-aos="fade-right">Employment</li>
                 <li data-aos="fade-left">Local autism laws and policies</li>
                 <li data-aos="fade-right">And more!</li>
-              </ul>
+              </ListTag>
               <p data-aos="fade-left">
                 Whether you are considering a move or looking for data to help
                 you advocate for better autism services in your state, Autism by
@@ -112,12 +108,7 @@ export default function Page() {
           </div>
 
           <div className="mx-auto max-w-7xl space-y-10 px-3">
-            <p
-              className="text-muted-foreground text-center text-3xl font-bold"
-              data-aos="fade-right"
-            >
-              Autism by the Numbers resources
-            </p>
+            <Heading>Autism by the Numbers resources</Heading>
             <div className="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3">
               {autismNumber.map((v) => (
                 <CardItem cardDeta={v} key={v.id} />

@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Heading, { ListTag, Paragraph } from "@/components/Heading";
 export const metadata: Metadata = {
   title: "Screening questionnaire",
 };
@@ -16,25 +17,20 @@ export default function Page() {
     <main className="space-y-5 overflow-hidden">
       <AOSWrapper>
         <Budge>Screening questionnaire</Budge>
-        <div className="mx-auto max-w-7xl space-y-6 px-3">
+        <div className="mx-auto max-w-7xl px-3">
           <div className="flex flex-col gap-5 md:flex-row">
             {/* Left Content */}
             <div className="space-y-3 md:basis-2/3">
               {/* Screening Questionnaire Section */}
-              <p
-                className="text-muted-foreground text-3xl font-bold"
-                data-aos="fade-right"
-              >
-                Screening Questionnaire
-              </p>
-              <p className="text-base" data-aos="fade-right">
+              <Heading>Screening Questionnaire</Heading>
+              <Paragraph>
                 Early identification of autism spectrum disorder (ASD) can
                 significantly improve a child&lsquo;s development outcomes. To
                 aid in early detection, healthcare providers and parents use
                 standardized screening questionnaires that assess communication,
                 behavior, and social interaction skills.
-              </p>
-              <ul className="list-inside list-disc" data-aos="fade-right">
+              </Paragraph>
+              <ListTag>
                 <li>
                   Screening is typically conducted during regular well-child
                   visits at 18 and 24 months of age.
@@ -54,7 +50,7 @@ export default function Page() {
                   to improving communication, social skills, and adaptive
                   behaviors.
                 </li>
-              </ul>
+              </ListTag>
               <p
                 className="text-muted-foreground text-sm italic"
                 data-aos="fade-right"

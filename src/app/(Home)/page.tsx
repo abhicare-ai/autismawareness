@@ -16,14 +16,12 @@ export default function Page() {
     <main className="space-y-16 overflow-hidden">
       <AOSWrapper>
         <div className="space-y-5">
-          <div className="bg-primary w-full space-y-5 pt-10 pb-26">
-            <h1 className="text-card px-3 text-center text-4xl font-bold">
-              Redefine Possible
-            </h1>
+          <div className="bg-primary w-full  pt-10 md:pb-26 pb-10">
+          
             <BannerCarousol />
           </div>
 
-          <div className="bg-sidebar-accent-foreground w-full px-3 py-10">
+          <div className="bg-sidebar-accent-foreground w-full px-3 py-10"  data-aos="fade-up">
             <div className="text-card mx-auto max-w-7xl space-y-5">
               <p className="text-2xl font-bold">Advocacy priorities</p>
               <p className="text-card">
@@ -41,7 +39,7 @@ export default function Page() {
         </div>
         <div
           className="mx-auto max-w-7xl space-y-10 px-3"
-          data-aos="fade-right"
+           data-aos="fade-up"
         >
           <p className="text-center text-4xl font-bold text-gray-600">
             Autism information and support
@@ -79,7 +77,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl space-y-10 px-3" data-aos="fade-down">
+        <div className="mx-auto max-w-7xl space-y-10 px-3"   data-aos="fade-up">
           <p className="text-center text-4xl font-bold text-gray-600">
             Find autism services and events in your community
           </p>

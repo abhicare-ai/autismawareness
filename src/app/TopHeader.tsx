@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import DonationButton from "@/components/DonationButton";
 import { cn } from "@/lib/utils";
 
 import { XIcon } from "lucide-react";
@@ -21,7 +21,7 @@ export default function TopHeader() {
           </p>
         </div>
 
-        <Button>Give Now</Button>
+       <DonationButton />
 
         <CutBar className="block md:hidden" onclose={() => setTopbar(true)} />
       </div>

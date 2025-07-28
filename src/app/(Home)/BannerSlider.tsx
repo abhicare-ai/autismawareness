@@ -14,15 +14,16 @@ export default function BannerSlider() {
   return (
     <div className="relative">
       {/* Custom Navigation Buttons */}
+
       <div
         ref={prevRef}
-        className="absolute top-[120%] right-1/2 z-10 flex h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-red-500 text-4xl text-gray-700 hover:text-black md:top-[110%]"
+        className="absolute  hidden top-[120%] right-[51%] z-10 md:flex h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-blue-200 text-4xl text-gray-700 hover:text-black md:top-[110%]"
       >
         ❮
       </div>
       <div
         ref={nextRef}
-        className="absolute top-[120%] left-1/2 z-10 flex h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-red-500 text-4xl text-gray-700 hover:text-black md:top-[110%]"
+        className="absolute top-[120%] hidden left-1/2 z-10 md:flex h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-blue-200 text-4xl text-gray-700 hover:text-black md:top-[110%]"
       >
         ❯
       </div>
@@ -50,13 +51,13 @@ export default function BannerSlider() {
         className="text-card"
       >
         {/* Slide 1 */}
-        <SwiperSlide className="relative cursor-grab">
-          <Image src={banerimg} alt="banerimg" className="w-full"/>
+        <SwiperSlide className="relative cursor-grab ">
+          <Image src={banerimg} alt="banerimg" className="w-full md:h-full h-[500px] object-cover" />
         </SwiperSlide>
 
         {/* Slide 2 */}
         <SwiperSlide className="relative cursor-grab">
-          <Image src={banerimg} alt="banerimg" className="w-full"/>
+          <Image src={banerimg} alt="banerimg" className="w-full md:h-full h-[500px] object-cover" />
         </SwiperSlide>
       </Swiper>
     </div>

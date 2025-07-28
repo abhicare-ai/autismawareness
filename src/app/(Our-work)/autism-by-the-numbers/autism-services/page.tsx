@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import annv from "@/assets/ABN-Image-1_0.png.webp";
+import Heading from "@/components/Heading";
 
 export const metadata: Metadata = {
   title: "Autism services",
@@ -20,12 +21,10 @@ export default function Page() {
           <div className="mx-auto flex max-w-7xl flex-col gap-5 px-3 xl:flex-row">
             <IndiaMapApp className="overflow-x-auto xl:w-1/2" />
             <div className="space-y-3 xl:w-1/2">
-              <p
-                className="text-muted-foreground text-3xl font-bold"
-                data-aos="fade-right"
+              <Heading
               >
                 Autism services in Indian cities and states
-              </p>
+              </Heading>
               <p data-aos="fade-left">
                 In Uttar Pradesh, autism awareness programs are growing through
                 government schools and private initiatives, especially in cities

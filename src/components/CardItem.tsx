@@ -20,7 +20,7 @@ export default function CardItem({ cardDeta }: CardItemPorps) {
       </Link>
       <div className="space-y-3 p-5 text-center">
         <Link
-          href={cardDeta.link}
+          href={`${cardDeta.link}/${cardDeta.id}`}
           className="text-xl font-semibold text-blue-600 hover:underline"
         >
           {cardDeta.title}

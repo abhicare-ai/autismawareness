@@ -9,7 +9,7 @@ export default function StickyNavigation({ className }: StickyNavigation) {
   const pathname = usePathname();
 
   return (
-    <div className={className}>
+    <aside className={className} data-aos="fade-right">
       <Link href="/what-autism">
         <p
           className={`w-full border-b px-3 py-3 ${pathname === "/what-autism" ? "bg-primary text-card" : "text-primary"}`}
@@ -52,6 +52,6 @@ export default function StickyNavigation({ className }: StickyNavigation) {
           Signs of autism
         </p>
       </Link>
-    </div>
+    </aside>
   );
 }

@@ -7,6 +7,7 @@ import React from "react";
 import { ChartPieInteractive } from "@/components/Chart-pie-interactive";
 import CardItem from "@/components/CardItem";
 import { stories } from "./list";
+import Heading, { ListTag } from "@/components/Heading";
 
 export const metadata: Metadata = {
   title: "Our impact",
@@ -22,20 +23,12 @@ export default function Page() {
             <div className="space-y-3">
               <div className="flex flex-col gap-5 md:flex-row">
                 <div className="space-y-3 md:w-1/2">
-                  <p
-                    className="text-muted-foreground text-3xl font-bold"
-                    data-aos="fade-right"
-                  >
-                    Through collaboration and partnerships we:
-                  </p>
-                  <p
-                    data-aos="fade-right"
-                    className="text-muted-foreground text-3xl font-bold"
-                  >
+                  <Heading>Through collaboration and partnerships we:</Heading>
+                  <Heading>
                     Ensure access to reliable information and services across
                     the lifespan
-                  </p>
-                  <ul className="list-inside list-disc" data-aos="fade-right">
+                  </Heading>
+                  <ListTag>
                     <li>
                       Expand resources and empower people with best practice
                       services
@@ -47,14 +40,11 @@ export default function Page() {
                     <li>
                       Ensure culturally competent and accessible resources
                     </li>
-                  </ul>
-                  <p
-                    className="text-muted-foreground text-3xl font-bold"
-                    data-aos="fade-right"
-                  >
+                  </ListTag>
+                  <Heading>
                     Support research and innovation to improve quality of life
-                  </p>
-                  <ul className="list-inside list-disc" data-aos="fade-right">
+                  </Heading>
+                  <ListTag>
                     <li>
                       Bridge basic, clinical and social sciences to drive
                       personalized health care
@@ -65,7 +55,7 @@ export default function Page() {
                       needs and aging process
                     </li>
                     <li>Expand global open science infrastructure</li>
-                  </ul>
+                  </ListTag>
                 </div>
                 <div className="md:w-1/2">
                   <ChartPieInteractive />

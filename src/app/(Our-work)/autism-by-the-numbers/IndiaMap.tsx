@@ -16,44 +16,45 @@ export const IndiaMapApp = ({ className }: IndiaMapAppProps) => {
   };
 
   const stateData: StateData[] = [
-    { id: "IN-AP", customData: { fillColor: "#007bff" } }, // Andhra Pradesh
-    { id: "IN-AR", customData: { fillColor: "#0066cc" } }, // Arunachal Pradesh
-    { id: "IN-AS", customData: { fillColor: "#005cbf" } }, // Assam
-    { id: "IN-BR", customData: { fillColor: "#0047b3" } }, // Bihar
-    { id: "IN-CT", customData: { fillColor: "#003da6" } }, // Chhattisgarh
-    { id: "IN-GA", customData: { fillColor: "#003399" } }, // Goa
-    { id: "IN-GJ", customData: { fillColor: "#002b80" } }, // Gujarat
-    { id: "IN-HR", customData: { fillColor: "#002266" } }, // Haryana
-    { id: "IN-HP", customData: { fillColor: "#001a4d" } }, // Himachal Pradesh
-    { id: "IN-JH", customData: { fillColor: "#001133" } }, // Jharkhand
-    { id: "IN-KA", customData: { fillColor: "#000a1a" } }, // Karnataka
-    { id: "IN-KL", customData: { fillColor: "#1a237e" } }, // Kerala
-    { id: "IN-MP", customData: { fillColor: "#283593" } }, // Madhya Pradesh
-    { id: "IN-MH", customData: { fillColor: "#303f9f" } }, // Maharashtra
-    { id: "IN-MN", customData: { fillColor: "#3949ab" } }, // Manipur
-    { id: "IN-ML", customData: { fillColor: "#3f51b5" } }, // Meghalaya
-    { id: "IN-MZ", customData: { fillColor: "#5c6bc0" } }, // Mizoram
-    { id: "IN-NL", customData: { fillColor: "#7986cb" } }, // Nagaland
-    { id: "IN-OR", customData: { fillColor: "#9fa8da" } }, // Odisha
-    { id: "IN-PB", customData: { fillColor: "#c5cae9" } }, // Punjab
-    { id: "IN-RJ", customData: { fillColor: "#e8eaf6" } }, // Rajasthan
-    { id: "IN-SK", customData: { fillColor: "#bbdefb" } }, // Sikkim
-    { id: "IN-TN", customData: { fillColor: "#90caf9" } }, // Tamil Nadu
-    { id: "IN-TG", customData: { fillColor: "#64b5f6" } }, // Telangana
-    { id: "IN-TR", customData: { fillColor: "#42a5f5" } }, // Tripura
-    { id: "IN-UP", customData: { fillColor: "#2196f3" } }, // Uttar Pradesh
-    { id: "IN-UT", customData: { fillColor: "#1e88e5" } }, // Uttarakhand
-    { id: "IN-WB", customData: { fillColor: "#1976d2" } }, // West Bengal
-    { id: "IN-AN", customData: { fillColor: "#1565c0" } }, // Andaman and Nicobar Islands
-    { id: "IN-CH", customData: { fillColor: "#0d47a1" } }, // Chandigarh
-    { id: "IN-DN", customData: { fillColor: "#82b1ff" } }, // Dadra and Nagar Haveli
-    { id: "IN-DD", customData: { fillColor: "#448aff" } }, // Daman and Diu
-    { id: "IN-DL", customData: { fillColor: "#2979ff" } }, // Delhi
-    { id: "IN-JK", customData: { fillColor: "#2962ff" } }, // Jammu and Kashmir
-    { id: "IN-LA", customData: { fillColor: "#0033cc" } }, // Ladakh
-    { id: "IN-LD", customData: { fillColor: "#3366ff" } }, // Lakshadweep
-    { id: "IN-PY", customData: { fillColor: "#6699ff" } }, // Puducherry
-  ];
+  { id: "IN-AP", customData: { totalPatients: 7892 } },
+  { id: "IN-AR", customData: { totalPatients: 3657 } },
+  { id: "IN-AS", customData: { totalPatients: 9134 } },
+  { id: "IN-BR", customData: { totalPatients: 10432 } },
+  { id: "IN-CT", customData: { totalPatients: 6542 } },
+  { id: "IN-GA", customData: { totalPatients: 2184 } },
+  { id: "IN-GJ", customData: { totalPatients: 8310 } },
+  { id: "IN-HR", customData: { totalPatients: 5534 } },
+  { id: "IN-HP", customData: { totalPatients: 4290 } },
+  { id: "IN-JH", customData: { totalPatients: 6671 } },
+  { id: "IN-KA", customData: { totalPatients: 7483 } },
+  { id: "IN-KL", customData: { totalPatients: 5123 } },
+  { id: "IN-MP", customData: { totalPatients: 9833 } },
+  { id: "IN-MH", customData: { totalPatients: 10045 } },
+  { id: "IN-MN", customData: { totalPatients: 2449 } },
+  { id: "IN-ML", customData: { totalPatients: 3620 } },
+  { id: "IN-MZ", customData: { totalPatients: 2094 } },
+  { id: "IN-NL", customData: { totalPatients: 2325 } },
+  { id: "IN-OR", customData: { totalPatients: 7421 } },
+  { id: "IN-PB", customData: { totalPatients: 5350 } },
+  { id: "IN-RJ", customData: { totalPatients: 8612 } },
+  { id: "IN-SK", customData: { totalPatients: 2010 } },
+  { id: "IN-TN", customData: { totalPatients: 9280 } },
+  { id: "IN-TG", customData: { totalPatients: 7462 } },
+  { id: "IN-TR", customData: { totalPatients: 2809 } },
+  { id: "IN-UP", customData: { totalPatients: 11420 } },
+  { id: "IN-UT", customData: { totalPatients: 3360 } },
+  { id: "IN-WB", customData: { totalPatients: 7934 } },
+  { id: "IN-AN", customData: { totalPatients: 2096 } },
+  { id: "IN-CH", customData: { totalPatients: 3115 } },
+  { id: "IN-DN", customData: { totalPatients: 2250 } },
+  { id: "IN-DD", customData: { totalPatients: 2631 } },
+  { id: "IN-DL", customData: { totalPatients: 8744 } },
+  { id: "IN-JK", customData: { totalPatients: 6243 } },
+  { id: "IN-LA", customData: { totalPatients: 2121 } },
+  { id: "IN-LD", customData: { totalPatients: 2015 } },
+  { id: "IN-PY", customData: { totalPatients: 2892 } },
+];
+
 
   return (
     <div className={cn("india-map-wrapper", className)}>

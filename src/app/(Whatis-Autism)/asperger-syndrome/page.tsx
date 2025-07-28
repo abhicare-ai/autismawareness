@@ -4,9 +4,10 @@ import { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import sigimg from "@/assets/A-young-man-wearing-a-plaid-shirt-while-sitting-on-a-bench-outside-and-looking-away-at-the-road.jpg";
+import Heading, { ListTag, Paragraph } from "@/components/Heading";
 
 export const metadata: Metadata = {
-  title: "Contact us",
+  title: "Asperger syndrome",
 };
 export default function Page() {
   return (
@@ -16,14 +17,11 @@ export default function Page() {
         <div className="mx-auto max-w-7xl space-y-3 px-3">
           <div className="flex flex-col gap-5 md:flex-row">
             <div className="space-y-3 md:basis-2/3">
-              <p
-                className="text-muted-foreground text-3xl font-bold"
-                data-aos="fade-right"
-              >
+              <Heading>
                 Explore the links below to learn more about our work toward each
                 of our mission objectives:
-              </p>
-              <p data-aos="fade-right">
+              </Heading>
+              <Paragraph data-aos="fade-right">
                 Asperger syndrome, or Asperger’s, is a{" "}
                 <strong>previously used diagnosis</strong>
                 on the autism spectrum. It was one of five forms of autism
@@ -35,56 +33,41 @@ export default function Page() {
                   (DSM-5)
                 </strong>
                 , now the DSM-5-TR.
-              </p>
-              <p className="font-bold" data-aos="fade-right">
+              </Paragraph>
+              <Heading>
                 The previous autism diagnosis categories included:
-              </p>
-              <ul className="list-inside list-disc">
-                <li data-aos="fade-right">Autistic disorder</li>
-                <li data-aos="fade-right">Childhood disintegrative disorder</li>
-                <li className="font-bold" data-aos="fade-right">
+              </Heading>
+              <ListTag>
+                <li>Autistic disorder</li>
+                <li>Childhood disintegrative disorder</li>
+                <li>
                   Pervasive developmental disorder, not otherwise specified
                   (PDD-NOS)
                 </li>
-                <li data-aos="fade-right">Asperger syndrome</li>
-                <li data-aos="fade-right">Rett syndrome</li>
-              </ul>
-              <p data-aos="fade-right">
+                <li>Asperger syndrome</li>
+                <li>Rett syndrome</li>
+              </ListTag>
+              <Paragraph>
                 Although Asperger syndrome has been retired from use by medical
                 professionals, some who received the diagnosis prior to 2013
                 still use the term and see it as an important part of their
                 identity. Others prefer to refer to themselves as autistic. Both
                 are correct; it is just a matter of personal choice.
-              </p>
+              </Paragraph>
             </div>
-            <Image
-              src={sigimg}
-              alt="sigimg"
-              className="md:basis-1/2"
-              data-aos="fade-left"
-            />
+            <Image src={sigimg} alt="sigimg" data-aos="fade-left" className="object-cover"/>
           </div>
-          <p
-            className="text-muted-foreground text-3xl font-bold"
-            data-aos="fade-left"
-          >
-            Asperger syndrome symptoms
-          </p>
-          <p data-aos="fade-right">
+          <Heading>Asperger syndrome symptoms</Heading>
+          <Paragraph>
             There is significant overlap in Asperger’s symptoms and ASD
             symptoms. Learn more about the symptoms of autism.
-          </p>
-          <p
-            className="text-muted-foreground text-3xl font-bold"
-            data-aos="fade-left"
-          >
-            What is Asperger&lsquo;s called now?
-          </p>
-          <p>
+          </Paragraph>
+          <Heading>What is Asperger&lsquo;s called now?</Heading>
+          <Paragraph>
             Today, those who would have previously met the criteria for Asperger
             syndrome are diagnosed with level 1 ASD. There is no difference
             between Asperger&lsquo;s and autism level 1 diagnoses.
-          </p>
+          </Paragraph>
         </div>
       </AOSWrapper>
     </main>

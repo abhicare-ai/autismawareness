@@ -1,5 +1,6 @@
 import AOSWrapper from "@/components/AOSWrapper";
 import Budge from "@/components/Budge";
+import Heading, { ListTag, Paragraph } from "@/components/Heading";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,30 +13,27 @@ export default function Page() {
       <AOSWrapper>
         <Budge>Access Services</Budge>
         <div className="mx-auto max-w-7xl space-y-3 px-3">
-          <p data-aos="fade-left">
+          <Paragraph>
             <em>
               Are you an adult seeking autism services? See our{" "}
               <strong>Guide for Adults</strong>.
             </em>
-          </p>
+          </Paragraph>
 
-          <p data-aos="fade-left">
+          <Paragraph>
             <strong>
               If your child’s screening for autism identifies developmental
               delays or learning challenges, he or she is entitled to
               intervention services.
             </strong>
-          </p>
+          </Paragraph>
 
-          <p
-            className="text-muted-foreground text-2xl font-bold pt-4"
-            data-aos="fade-right"
-          >
+          <Heading>
             You can start these services before your child receives an autism
             diagnosis.
-          </p>
+          </Heading>
 
-          <ul className="list-inside list-disc" data-aos="fade-left">
+          <ListTag>
             <li>
               If your child is under the age of 3, you can get services through
               your state’s <strong>Early Intervention</strong> program.
@@ -48,28 +46,20 @@ export default function Page() {
               Use our <strong>Directory</strong> to find these services in your
               area.
             </li>
-          </ul>
+          </ListTag>
 
-          <p
-            className="text-muted-foreground text-2xl font-bold pt-6"
-            data-aos="fade-right"
-          >
+          <Paragraph>
             Forty-eight states require health insurers to cover autism services.
-          </p>
+          </Paragraph>
 
-          <p data-aos="fade-left">
+          <Paragraph>
             To learn about your state’s autism-related health coverage, visit
             our <strong>Health Insurance</strong> page.
-          </p>
+          </Paragraph>
 
-          <p
-            className="text-muted-foreground text-2xl font-bold pt-6"
-            data-aos="fade-right"
-          >
-            For more guidance, see the tool kits below:
-          </p>
+          <Heading>For more guidance, see the tool kits below:</Heading>
 
-          <ul className="list-inside list-disc" data-aos="fade-left">
+          <ListTag>
             <li>
               <strong>
                 100 Day Kit for Newly Diagnosed Families of Young Children
@@ -86,7 +76,7 @@ export default function Page() {
                 Practical Tips
               </strong>
             </li>
-          </ul>
+          </ListTag>
         </div>
       </AOSWrapper>
     </main>
