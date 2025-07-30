@@ -6,10 +6,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
-import banerimg from "@/assets/2025_20th-Annv_hero-alt.jpg";
+import banerimg1 from "@/assets/rajverr_banner-3.png";
+import banerimg2 from "@/assets/WhatsApp Image 2025-07-29 at 14.46.36_df698a28.jpg";
+import banerimg3 from "@/assets/WhatsApp Image 2025-07-29 at 14.56.01_da0b5eff.jpg";
+import banerimg4 from "@/assets/WhatsApp Image 2025-07-29 at 15.26.15_d448b2cd.jpg";
 export default function BannerSlider() {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
+
+
 
   return (
     <div className="relative">
@@ -17,13 +22,13 @@ export default function BannerSlider() {
 
       <div
         ref={prevRef}
-        className="absolute  hidden top-[120%] right-[51%] z-10 md:flex h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-blue-200 text-4xl text-gray-700 hover:text-black md:top-[110%]"
+        className="absolute top-[120%] right-[51%] z-10 hidden h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-blue-200 text-4xl text-gray-700 hover:text-black md:top-[110%] md:flex"
       >
         ❮
       </div>
       <div
         ref={nextRef}
-        className="absolute top-[120%] hidden left-1/2 z-10 md:flex h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-blue-200 text-4xl text-gray-700 hover:text-black md:top-[110%]"
+        className="absolute top-[120%] left-1/2 z-10 hidden h-[50px] w-[50px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-2 border-blue-200 text-4xl text-gray-700 hover:text-black md:top-[110%] md:flex"
       >
         ❯
       </div>
@@ -50,14 +55,49 @@ export default function BannerSlider() {
         }}
         className="text-card"
       >
+        <SwiperSlide className="relative cursor-grab">
+          <video
+        
+            src="/WhatsApp Video 2025-07-29 at 15.30.16_a347fba1.mp4"
+            autoPlay
+            // muted
+            loop
+            controls
+            playsInline
+            className="h-[500px] shadow-lg mx-auto"
+          />
+        
+        </SwiperSlide>
         {/* Slide 1 */}
-        <SwiperSlide className="relative cursor-grab ">
-          <Image src={banerimg} alt="banerimg" className="w-full md:h-full h-[500px] object-cover" />
+        <SwiperSlide className="relative cursor-grab">
+          <Image
+            src={banerimg1}
+            alt="banerimg"
+            className="h-[500px] object-cover md:h-full"
+          />
         </SwiperSlide>
 
         {/* Slide 2 */}
         <SwiperSlide className="relative cursor-grab">
-          <Image src={banerimg} alt="banerimg" className="w-full md:h-full h-[500px] object-cover" />
+          <Image
+            src={banerimg2}
+            alt="banerimg"
+            className="h-[500px] w-full object-cover md:h-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="relative cursor-grab">
+          <Image
+            src={banerimg3}
+            alt="banerimg"
+            className="h-[500px] w-full object-cover md:h-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="relative cursor-grab">
+          <Image
+            src={banerimg4}
+            alt="banerimg"
+            className="h-[500px] w-full object-cover md:h-full"
+          />
         </SwiperSlide>
       </Swiper>
     </div>

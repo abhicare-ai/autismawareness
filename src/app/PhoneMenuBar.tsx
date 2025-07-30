@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import { usePathname, useSearchParams } from "next/navigation";
 import DonationButton from "@/components/DonationButton";
+import PackageButton from "@/components/PackageButton";
 
 export default function MenuBar() {
   return (
@@ -58,6 +59,10 @@ export default function MenuBar() {
               Events
             </Link>{" "}
           </p>{" "}
+          <PackageButton />
+          <Button asChild>
+            <Link href={"/but-autism-book"}>Buy Autism Book</Link>
+          </Button>
         </div>
 
         <div className="flex items-center justify-between gap-5">
@@ -283,6 +288,7 @@ export default function MenuBar() {
               <p className="bg-primary absolute -bottom-3 left-0 h-1 w-0 rounded-md duration-300 group-hover:right-0 group-hover:w-full"></p>
             </div>
           </div>
+
           <DonationButton />
         </div>
       </div>
@@ -381,6 +387,11 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
             Explore our sections and learn more
           </SheetDescription>
         </SheetHeader>
+
+        <PackageButton className="w-full justify-between rounded-none" />
+        <Button asChild className="w-full justify-between rounded-none">
+          <Link href={"/but-autism-book"}>Buy Autism Book</Link>
+        </Button>
 
         <Button
           variant="outline"

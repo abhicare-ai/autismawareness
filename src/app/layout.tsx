@@ -7,6 +7,8 @@ import { Toaster } from "@/components/ui/sonner";
 import Footer from "./Footer";
 import { Suspense } from "react";
 import SideBarButton from "@/components/SideBarButton";
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

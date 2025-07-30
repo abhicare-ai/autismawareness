@@ -24,3 +24,33 @@ model Contact {
 
   @@map("contacts")
 }
+
+model Appoinment {
+  id          String  @id @default(cuid())
+  fullname    String
+  emails      String
+  phoneNumber String
+  message     String?
+
+  createdAt DateTime @default(now())
+
+  @@map("appoinments")
+}
+
+model Donation {
+  id          String @id @default(cuid())
+  name        String
+  emails      String
+  phoneNumber String
+  country     String
+  state       String
+  amount      Int
+
+  orderId           String  @unique
+  razorpayPaymentId String?
+  razorpaySignature String?
+
+  createdAt DateTime @default(now())
+
+  @@map("donations")
+}
