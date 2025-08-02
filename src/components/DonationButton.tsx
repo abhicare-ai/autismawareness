@@ -1,18 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import { Heart } from "lucide-react";
+
 import "../app/styles.css";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
-// import donationImage from "@/assets/IMG-20250727-WA0007.jpg";
+
+import packagse from "@/assets/s268819900234155836_p257_i1_w1200.jpeg";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-// import Image from "next/image";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
+
 import { Label } from "./ui/label";
 import {
   Form,
@@ -30,15 +30,16 @@ import LoadingButton from "./LoadingButton";
 import Script from "next/script";
 import { PhoneInput } from "./PhoneInput";
 import { donate } from "./actions";
+import { Button } from "./ui/button";
+import { Heart } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 interface DonationButtonProps {
   className?: string;
 }
-
 export default function DonationButton({ className }: DonationButtonProps) {
   const [animate, setAnimate] = useState(false);
   const [open, setOpen] = useState(false);
-  const [selectedAmount, setSelectedAmount] = useState<number>(4000);
 
   const clickHandler = () => {
     setAnimate(true);
@@ -69,55 +70,37 @@ export default function DonationButton({ className }: DonationButtonProps) {
       phoneNumber: "",
       country: "",
       state: "",
-      amount: 4000,
+      amount: "4000",
       orderId: "",
       razorpayPaymentId: "",
       razorpaySignature: "",
     },
   });
 
+  const { setValue } = form;
+
+  const [loding, setLoding] = useState(false);
   const onSubmit = async (input: DonateValues) => {
-    const finalInpute = {
-      name: input.name as string,
-      emails: input.emails as string,
-      phoneNumber: input.phoneNumber as string,
-      country: input.country as string,
-      state: input.state as string,
-      amount: selectedAmount as number,
-    };
-    console.log(finalInpute);
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const donateData = await donate(finalInpute as any);
-      console.log(donateData);
+      setLoding(true);
+      const donateData = await donate(input);
 
-      if (donateData.orderId) {
-        const paymentData = {
-          key: process.env.NEXT_PUBLIC_RAZOR_KEY,
-          order_id: donateData.orderId,
-
-          name: "Dr.Rajeev's Autism Care",
-          description: "Sponsorship Payment",
-          image: "https://www.rajeevclinic.com/assets/images/web_logo_2.png",
-
-          theme: {
-            color: "#3399cc",
-          },
-        };
-
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const payment = new (window as any).Razorpay(paymentData);
-        payment.open();
+      if (donateData) {
+        window.location.href = donateData; // Instamojo payment page
       }
     } catch (error) {
-      console.log(error)
+      setLoding(false);
+      console.log(error);
+    } finally {
+      setLoding(false);
     }
   };
+
   return (
     <>
       <Button
         className={cn(
-          `${animate ? "animate" : ""} button animate-bounce duration-300 delay-300`,
+          `${animate ? "animate" : ""} button animate-bounce delay-300 duration-300`,
           className,
         )}
         onClick={clickHandler}
@@ -127,147 +110,124 @@ export default function DonationButton({ className }: DonationButtonProps) {
       </Button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="p-0 md:!max-w-[900px]">
+        <DialogContent
+          className="h-[32rem] overflow-y-auto p-0 md:!max-w-[900px]"
+          onInteractOutside={(e) => e.preventDefault()}
+        >
           <DialogHeader className="space-y-5">
-            <DialogTitle className="pt-3 text-center">Donate Now</DialogTitle>
+            <DialogTitle className="hidden pt-3 text-center">
+              Donate Now
+            </DialogTitle>
             <div className="flex">
-              {/* <Image
-                src={donationImage}
-                alt="donationImage"
-                className="hidden object-cover md:inline md:w-1/2 h-fit"
-              /> */}
-              <div className="px-3 md:w-1/2">
-                <Tabs
-                  defaultValue="account"
-                  className="h-[500px] overflow-y-auto p-3"
-                >
-                  <TabsList>
-                    <TabsTrigger value="account">Donation</TabsTrigger>
-                    <TabsTrigger value="password">Package</TabsTrigger>
-                  </TabsList>
-
-                  <TabsContent
-                    value="account"
-                    className="flex w-full flex-wrap gap-2"
+              <div className="w-full space-y-5 overflow-y-auto px-3 py-3 md:w-1/2">
+                <h3 className="w-full text-center text-2xl font-bold whitespace-nowrap">
+                  Donate Now
+                </h3>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="w-full space-y-3"
                   >
-                    <Form {...form}>
-                      <form
-                        onSubmit={form.handleSubmit(onSubmit)}
-                        className="w-full space-y-3"
-                      >
-                        <FormField
-                          control={form.control}
-                          name="amount"
-                          render={({ field }) => (
-                            <FormItem className="hidden !w-full">
-                              <FormLabel>Patient Name </FormLabel>
-                              <FormControl>
-                                <Input
-                                  {...field}
-                                  value={field.value}
-                                  readOnly
-                                  type="number"
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        {/* Name Field */}
-                        <FormField
-                          control={form.control}
-                          name="name"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Name</FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Enter your name"
-                                  {...field}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        {/* email Field */}
-                        <FormField
-                          control={form.control}
-                          name="emails"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Email</FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Enter your email"
-                                  {...field}
-                                  type="email"
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        {/* Phone Number Field */}
-                        <FormField
-                          control={form.control}
-                          name="phoneNumber"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Phone Number</FormLabel>
-                              <FormControl>
-                                <PhoneInput
-                                  value={field.value}
-                                  onChange={field.onChange}
-                                  defaultCountry="IN"
-                                  placeholder="Enter your mobile number"
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
+                    {/* Name Field */}
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Enter your name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    {/* email Field */}
+                    <FormField
+                      control={form.control}
+                      name="emails"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Enter your email"
+                              {...field}
+                              type="email"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    {/* Phone Number Field */}
+                    <FormField
+                      control={form.control}
+                      name="phoneNumber"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Phone Number</FormLabel>
+                          <FormControl>
+                            <PhoneInput
+                              value={field.value}
+                              onChange={field.onChange}
+                              defaultCountry="IN"
+                              placeholder="Enter your mobile number"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                        {/* Country Field */}
-                        <FormField
-                          control={form.control}
-                          name="country"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Country</FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Enter your country"
-                                  {...field}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
+                    {/* Country Field */}
+                    <FormField
+                      control={form.control}
+                      name="country"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Country</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Enter your country"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                        {/* State Field */}
-                        <FormField
-                          control={form.control}
-                          name="state"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>State</FormLabel>
-                              <FormControl>
-                                <Input
-                                  placeholder="Enter your state"
-                                  {...field}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
+                    {/* State Field */}
+                    <FormField
+                      control={form.control}
+                      name="state"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>State</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Enter your state" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                        {/* Amount Field */}
+                    {/* Amount Field */}
+
+                    <Tabs defaultValue="1" className="overflow-y-auto p-3">
+                      <TabsList>
+                        <TabsTrigger value="1">Choose Amount</TabsTrigger>
+                        <TabsTrigger value="2">Custom Amount</TabsTrigger>
+                      </TabsList>
+
+                      <TabsContent value="1">
                         <div className="space-y-2">
-                          <p className="text-[14px] font-medium">Amout</p>
-                          <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
+                          <p className="text-[14px] font-medium">
+                            Select Amout
+                          </p>
+
+                          <div className="grid grid-cols-2 gap-5 sm:grid-cols-4">
                             {donations.map((donation) => (
                               <div key={donation.id}>
                                 <input
@@ -275,9 +235,15 @@ export default function DonationButton({ className }: DonationButtonProps) {
                                   id={`donation-${donation.id}`}
                                   name="donation"
                                   value={donation.price}
-                                  checked={selectedAmount === donation.price}
+                                  checked={
+                                    form.watch("amount") ===
+                                    donation.price.toString()
+                                  }
                                   onChange={() =>
-                                    setSelectedAmount(donation.price)
+                                    setValue(
+                                      "amount",
+                                      donation.price.toString(),
+                                    )
                                   }
                                   className="peer hidden"
                                 />
@@ -293,18 +259,40 @@ export default function DonationButton({ className }: DonationButtonProps) {
                             ))}
                           </div>
                         </div>
-                        <LoadingButton className="w-full" loading={false}>
-                          Submit
-                        </LoadingButton>
-                      </form>
-                    </Form>
-                  </TabsContent>
+                      </TabsContent>
+                      <TabsContent value="2">
+                        <FormField
+                          control={form.control}
+                          name="amount"
+                          render={({ field }) => (
+                            <FormItem className="!w-full">
+                              <FormLabel>Customize Amount</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...field}
+                                  value={field.value}
+                                  placeholder="Write a custom amount"
+                                  type="number"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </TabsContent>
+                    </Tabs>
 
-                  <TabsContent value="password">
-                    Change your password here.
-                  </TabsContent>
-                </Tabs>
+                    <LoadingButton className="w-full" loading={loding}>
+                      Submit
+                    </LoadingButton>
+                  </form>
+                </Form>
               </div>
+              <Image
+                src={packagse}
+                alt="donationImage"
+                className="hidden h-full object-cover md:inline md:w-1/2"
+              />
             </div>
           </DialogHeader>
         </DialogContent>

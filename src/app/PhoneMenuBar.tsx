@@ -18,53 +18,8 @@ import PackageButton from "@/components/PackageButton";
 
 export default function MenuBar() {
   return (
-    <menu className="bg-card hidden w-full lg:block">
-      <div className="mx-auto max-w-7xl p-3">
-        <div className="flex justify-center gap-5">
-          <p>
-            <Link
-              href={"/about-us"}
-              className="hover:text-primary hover:underline"
-            >
-              About us
-            </Link>{" "}
-          </p>{" "}
-          |{" "}
-          <p>
-            <Link
-              href={"/autism-speaks-controversy"}
-              className="hover:text-primary hover:underline"
-            >
-              Common misconceptions
-            </Link>{" "}
-          </p>{" "}
-          |
-          <p>
-            <a
-              href={
-                "https://www.drrajeevswellness.com/product-category/autism-care/"
-              }
-              target="_blank"
-              className="hover:text-primary hover:underline"
-            >
-              Buy autism wellness products
-            </a>{" "}
-          </p>{" "}
-          |
-          <p>
-            <Link
-              href={"/events"}
-              className="hover:text-primary hover:underline"
-            >
-              Events
-            </Link>{" "}
-          </p>{" "}
-          <PackageButton />
-          <Button asChild>
-            <Link href={"/but-autism-book"}>Buy Autism Book</Link>
-          </Button>
-        </div>
-
+    <menu className="bg-card z-40 hidden w-full shadow-md lg:block">
+      <div className="mx-auto max-w-7xl px-3">
         <div className="flex items-center justify-between gap-5">
           <Link href="/">
             {" "}
@@ -252,11 +207,6 @@ export default function MenuBar() {
                           News
                         </Link>
                       </li>
-                      <li>
-                        <Link href="/contact-us" className="hover:underline">
-                          Contact us
-                        </Link>
-                      </li>
                     </ul>
                   </div>
 
@@ -283,8 +233,44 @@ export default function MenuBar() {
               </div>
             </div>
 
+            <div className="group relative flex h-[100px] cursor-pointer items-center gap-3">
+              Our activities <span>|</span>
+              <p className="bg-primary absolute bottom-8 left-0 h-1 w-0 rounded-md duration-300 group-hover:right-0 group-hover:w-full"></p>
+              <div className="bg-card absolute top-full left-1/2 z-20 mx-auto max-w-7xl origin-top -translate-x-1/2 scale-y-0 cursor-default space-y-5 duration-300 group-hover:scale-y-100">
+                <div className="flex gap-10 p-5">
+                  {/* Column 1 */}
+                  <div className="flex min-w-[220px] flex-col gap-3">
+                    <ul className="text-primary space-y-2">
+                      <li>
+                        <Link href="/media-corner" className="hover:underline">
+                          Media corner
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/social-activities" className="hover:underline">
+                          Social activities
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/awards" className="hover:underline">
+                          Awards
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Divider */}
+              
+                </div>
+
+                {/* Bottom bar */}
+                <div className="bg-primary absolute bottom-0 left-0 h-1.5 w-full"></div>
+              </div>
+            </div>
+
             <div className="group relative flex cursor-pointer items-center gap-3">
-              Get involved
+              <Link href="/contact-us">Contact us</Link>
+
               <p className="bg-primary absolute -bottom-3 left-0 h-1 w-0 rounded-md duration-300 group-hover:right-0 group-hover:w-full"></p>
             </div>
           </div>
@@ -365,9 +351,16 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
         { href: "/our-mission", label: "Our mission" },
         { href: "/our-impact", label: "Our impact" },
         { href: "/news", label: "News" },
-        { href: "/contact-us", label: "Contect" },
-
         { href: "/autism-by-the-numbers", label: "Autism by the Numbers" },
+      ],
+    },
+      {
+      title: "Our activities",
+      links: [
+        { href: "/media-corner", label: "Media corner" },
+        { href: "/social-activities", label: "Social activities" },
+        { href: "/awards", label: "Awards" },
+      
       ],
     },
   ];
@@ -390,7 +383,7 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
 
         <PackageButton className="w-full justify-between rounded-none" />
         <Button asChild className="w-full justify-between rounded-none">
-          <Link href={"/but-autism-book"}>Buy Autism Book</Link>
+          <Link href={"/buy-autism-book"}>Buy Autism Book</Link>
         </Button>
 
         <Button
@@ -435,12 +428,7 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
             </div>
           ))}
         </div>
-        <Button
-          variant="outline"
-          className="w-full justify-between rounded-none"
-        >
-          Get involved
-        </Button>
+       
         <Button
           variant="outline"
           className="w-full justify-between rounded-none"
@@ -476,6 +464,13 @@ function SheetBar({ open, onOpenChange }: SheetBarProps) {
           asChild
         >
           <Link href={"/events"}>Events</Link>
+        </Button>
+            <Button
+          variant="outline"
+          className="w-full justify-between rounded-none"
+          asChild
+        >
+          <Link href={"/contact-us"}>Contact us</Link>
         </Button>
       </SheetContent>
     </Sheet>

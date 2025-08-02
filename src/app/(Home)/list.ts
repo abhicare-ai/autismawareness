@@ -37,14 +37,15 @@ export const autisminservice: AutismInformationArray = [
     id: 2,
     image: "/WhatsApp Image 2025-07-29 at 14.36.44_46733ae9.jpg",
     title: "Autism Book",
-    description: "Find autism specialists in your community.",
+    description:
+      "Autism Book is a simple way to connect with trusted autism specialists and resources in your community.",
     link: "/resource-guide",
   },
   {
     id: 3,
-    image: "/WhatsApp Image 2025-07-29 at 14.36.42_5fe8e223.jpg",
+    image: "/WhatsApp Image 2025-07-29 at 14.36.47_3fec55d3.jpg",
     title: "Autism activities and events",
-    description: "Find autism-friendly activities and events in your area.",
+    description: "Snapshots from autism awareness events and inclusive community activities.",
     link: "/events",
   },
 ];

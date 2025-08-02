@@ -457,8 +457,7 @@ export default function Page() {
               <Bookmark className="size-8" />
             </div>
             <p className={"text-center text-5xl font-bold"}>
-              If you&lsquo;ve met one person with autism, you&lsquo;ve met one
-              person with autism.
+             Every child with autism speaks a different language of love — our job is to listen with patience, and heal with understanding.
             </p>
             <p className="text-center">- Dr. Rajeev Kumar</p>
           </div>

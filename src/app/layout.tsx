@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Footer from "./Footer";
 import { Suspense } from "react";
 import SideBarButton from "@/components/SideBarButton";
-
+import ReactQueryProvider from "./ReactQueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,16 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <TopHeader />
-        <MenuBar />
-        <Suspense>
-          <PhoneMenuBar />
-        </Suspense>
+        <ReactQueryProvider>
+          <TopHeader />
+          <MenuBar />
+          <Suspense>
+            <PhoneMenuBar />
+          </Suspense>
 
-        {children}
-        <SideBarButton className=" fixed top-1/2 right-0 z-20 origin-bottom-right rotate-[-90deg] " />
-        <Footer />
-        <Toaster />
+          {children}
+          <SideBarButton className="fixed top-1/2 right-0 z-20 origin-bottom-right rotate-[-90deg]" />
+          <Footer />
+          <Toaster />
+        </ReactQueryProvider>
       </body>
     </html>
   );

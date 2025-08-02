@@ -1,42 +1,91 @@
 "use server";
+
+import axios from "axios";
 import { prisma } from "@/lib/prisma";
 import { donatechema, DonateValues } from "../lib/vallidation";
-import Razorpay from "razorpay";
 
-const razorpay = new Razorpay({
-  key_id: process.env.NEXT_PUBLIC_RAZOR_KEY as string,
-  key_secret: process.env.RAZOR_SECRET,
-});
 export async function donate(input: DonateValues) {
-  const finalInpute = {
-    name: input.name as string,
-    emails: input.emails as string,
-    phoneNumber: input.phoneNumber as string,
-    country: input.country as string,
-    state: input.state as string,
-    amount: input.amount as number,
+  const { amount, country, emails, name, state, phoneNumber } =
+    donatechema.parse(input);
+  const payload = {
+    purpose: "Donation to Dr. Rajeev's Autism Care",
+    amount: String(amount), // ✅ Ensure it is a string
+    buyer_name: name,
+    email: emails,
+    phone: phoneNumber,
+    redirect_url: process.env.INSTAMOJO_REDIRECT_URL,
+    send_email: true,
+    send_sms: true,
+    allow_repeated_payments: false,
   };
-  //   const { name, phoneNumber, country, state, amount, emails } =
-  //     donatechema.parse(finalInpute);
 
-  //   console.log("amount", amount);
-  const donate = await razorpay.orders.create({
-    amount: finalInpute.amount,
-    currency: "INR",
-  });
+  const { data } = await axios.post(
+    "https://www.instamojo.com/api/1.1/payment-requests/",
+    payload,
+    {
+      headers: {
+        "X-Api-Key": process.env.INSTAMOJO_API_KEY!,
+        "X-Auth-Token": process.env.INSTAMOJO_AUTH_TOKEN!,
+      },
+    },
+  );
 
-  const createDonate = await prisma.donation.create({
+  // Optional: save this in DB
+  await prisma.donation.create({
     data: {
-      name: finalInpute.name,
-      phoneNumber: finalInpute.phoneNumber,
-      country: finalInpute.country,
-      state: finalInpute.state,
-      emails: finalInpute.emails,
-      amount: finalInpute.amount,
-
-      orderId: donate.id,
+      country,
+      emails,
+      name,
+      state,
+      amount: parseInt(amount),
+      phoneNumber,
+      orderId: data.payment_request.id,
     },
   });
 
-  return createDonate;
+  // Return Instamojo payment page
+  return data.payment_request.longurl;
+}
+
+export async function autismpackage(input: DonateValues) {
+  const { amount, country, emails, name, state, phoneNumber } =
+    donatechema.parse(input);
+  const payload = {
+    purpose: "Get Your Autism Care Package",
+    amount: String(amount), // ✅ Ensure it is a string
+    buyer_name: name,
+    email: emails,
+    phone: phoneNumber,
+    redirect_url: process.env.IINSTAMOJO_PACKAGE_REDIRECT_URL,
+    send_email: true,
+    send_sms: true,
+    allow_repeated_payments: false,
+  };
+
+  const { data } = await axios.post(
+    "https://www.instamojo.com/api/1.1/payment-requests/",
+    payload,
+    {
+      headers: {
+        "X-Api-Key": process.env.INSTAMOJO_API_KEY!,
+        "X-Auth-Token": process.env.INSTAMOJO_AUTH_TOKEN!,
+      },
+    },
+  );
+
+  // Optional: save this in DB
+  await prisma.autismPackage.create({
+    data: {
+      country,
+      emails,
+      name,
+      state,
+      amount: parseInt(amount),
+      phoneNumber,
+      orderId: data.payment_request.id,
+    },
+  });
+
+  // Return Instamojo payment page
+  return data.payment_request.longurl;
 }

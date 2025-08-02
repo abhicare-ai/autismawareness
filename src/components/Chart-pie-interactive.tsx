@@ -29,11 +29,13 @@ import {
 export const description = "An interactive pie chart";
 
 const desktopData = [
-  { month: "january", desktop: 186, fill: "var(--color-january)" },
-  { month: "february", desktop: 305, fill: "var(--color-february)" },
-  { month: "march", desktop: 237, fill: "var(--color-march)" },
-  { month: "april", desktop: 173, fill: "var(--color-april)" },
-  { month: "may", desktop: 209, fill: "var(--color-may)" },
+  { month: "january", desktop: 10000, fill: "var(--color-january)" },
+  { month: "february", desktop: 12000, fill: "var(--color-february)" },
+  { month: "march", desktop: 5000, fill: "var(--color-march)" },
+  { month: "april", desktop: 9000, fill: "var(--color-april)" },
+  { month: "may", desktop: 15000, fill: "var(--color-may)" },
+  { month: "jun", desktop: 10050, fill: "var(--color-may)" },
+  { month: "july", desktop: 8000, fill: "var(--color-may)" },
 ];
 
 const chartConfig = {
@@ -66,6 +68,14 @@ const chartConfig = {
     label: "May",
     color: "var(--chart-5)",
   },
+  jun: {
+    label: "Jun",
+    color: "var(--chart-5)",
+  },
+  july: {
+    label: "July",
+    color: "var(--chart-5)",
+  },
 } satisfies ChartConfig;
 
 export function ChartPieInteractive() {
@@ -79,12 +89,12 @@ export function ChartPieInteractive() {
   const months = React.useMemo(() => desktopData.map((item) => item.month), []);
 
   return (
-    <Card data-chart={id} className="flex flex-col"  data-aos="fade-left">
+    <Card data-chart={id} className="flex flex-col" data-aos="fade-left">
       <ChartStyle id={id} config={chartConfig} />
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
-          <CardTitle>Pie Chart - Interactive</CardTitle>
-          <CardDescription>January - May 2025</CardDescription>
+          <CardTitle> Patient Visitors In Our Clinic </CardTitle>
+          <CardDescription>January - July 2025</CardDescription>
         </div>
         <Select value={activeMonth} onValueChange={setActiveMonth}>
           <SelectTrigger
@@ -176,7 +186,7 @@ export function ChartPieInteractive() {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Visitors
+                          Patient Visitors
                         </tspan>
                       </text>
                     );

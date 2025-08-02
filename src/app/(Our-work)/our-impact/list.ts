@@ -3,303 +3,112 @@ import { exploreType } from "@/lib/types";
 export const stories: exploreType[] = [
   {
     id: 1,
-    img: "/Jordan-wearing-a-blue-collared-shirt.jpg.webp",
-    title: "Family finds answers through MSSNG",
+    img: "/WhatsApp Image 2025-07-29 at 14.37.15_88417264.jpg",
+    title: "How Ansh Found His Voice Through Homeopathy & Therapy",
     link: "/our-impact",
-    desc: "When Trey M., 30, was first diagnosed with autism in 1995 at age 3, his family got straight to work finding information, therapies and supports that",
+    desc: "Diagnosed with autism at age 4, Ansh’s journey has been one of courage, persistence, and personalized care. Today, he inspires others.",
     subtab: {
       id: 2,
       heading: "",
-      paragraph: ` <p class="text-muted-foreground text-3xl font-bold" >
-              Family finds answers through MSSNG
-            </p>
-            <p class="text-muted-foreground text-sm font-bold">
-              By Marta Chmielowicz
-            </p>
-            <p>
-              When Trey M., 30, was first diagnosed with autism in 1995 at age
-              3, his family got straight to work finding information, therapies
-              and supports that could help him one day live an independent life.
-              But with the Internet still in its infancy, Trey’s family had
-              limited access to information that could help their son. Instead,
-              they took a trial-and-error approach, testing for seizures and
-              dietary issues that could be the cause of their son’s biggest
-              medical challenges.
-            </p>
-            <p>
-              They did not find their answer until 2021, when they received
-              Trey’s genetic testing results through the Autism Speaks-supported
-              <strong>MSSNG program</strong>. After seven years of waiting for
-              results, they learned that Trey has Phelan-McDermid Syndrome, a
-              rare genetic condition caused by variants, or changes, in the
-              SHANK3 gene. Features of this condition can include developmental
-              and speech delays, behavioral issues, seizures and a weakened
-              ability to feel pain or sweat. It is estimated that only 1-2% of
-              people with autism have Phelan-McDermid syndrome.
-            </p>
-            <p>
-              Now at age 30, Trey lives in a residential program and sees his
-              family every weekend. He receives Applied Behavior Analysis (ABA)
-              therapy, speech therapy and equine therapy, and has fallen in love
-              with horseback riding and hiking. Thanks to the MSSNG program,
-              Trey’s family has the knowledge they need to research
-              interventions that can help Trey with his unique challenges,
-              giving them greater peace of mind as they plan for his future.
-            </p>
-            <div class="flex flex-col gap-5 md:flex-row">
-              <div class="space-y-3 md:w-1/2">
-                <p class="text-muted-foreground text-3xl font-bold">
-                  In this Q&A, Trey’s father, Jim, shares his son’s experience
-                  with the MSSNG program.
-                </p>
-                <p class="text-muted-foreground text-3xl font-bold">
-                  Can you tell me about Trey and his autism journey?
-                </p>
-                <p>
-                  Trey was diagnosed with autism around 3 years old. He had some
-                  delays at 18 months, but his speech developed until he was 4.5
-                  years old. At that point, he lost most of his words and he’s
-                  basically nonverbal now. When he was 4.5, we started doing ABA
-                  therapy at home to help with potty training, eye contact and
-                  speech. He did drills to match colors and shapes, and flash
-                  cards to learn some simple words and basic sign language.
-                </p>
-                <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-                 <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-                 <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-              </div>
+      paragraph: ` 
+    <p class="text-muted-foreground text-3xl font-bold">
+      How Ansh Found His Voice Through Homeopathy & Therapy
+    </p>
+    <p class="text-muted-foreground text-sm font-bold">
+      By Team Rajeev Clinic
+    </p>
+    <p>
+      Ansh, a cheerful 11-year-old boy from Bhopal, was diagnosed with autism spectrum disorder at the age of 4. His parents, though shocked at first, were determined to find ways to support him. Like many others, their first steps were filled with uncertainty — unclear diagnoses, conflicting advice, and emotional upheaval.
+    </p>
+    <p>
+      In 2019, Ansh’s family discovered <strong>Dr. Rajeev Kumar’s Autism Homeopathy Program</strong> through a community health camp. They enrolled immediately, combining structured ABA therapy with individualized homeopathic treatment. What followed was nothing short of a transformation.
+    </p>
+    <p>
+      Within six months, Ansh’s severe meltdowns reduced significantly. He began making eye contact and responding to his name — small victories that meant the world to his parents. By the second year, Ansh had begun using sign language, and eventually simple words.
+    </p>
+    <p>
+      “He said ‘Amma’ for the first time when he was seven,” recalls his mother with tears in her eyes. “We waited years for that moment.”
+    </p>
+    
+    <div class="flex flex-col gap-5 md:flex-row">
+      <div class="space-y-3 md:w-1/2">
+        <p class="text-muted-foreground text-3xl font-bold">
+          Education, Empowerment & Expression
+        </p>
+        <p>
+          Today, Ansh attends a special education school in Bhopal and is learning to draw and play the tabla. His teachers describe him as focused, expressive, and compassionate. He also volunteers at the clinic on Sundays — handing out crayons and smiling at younger kids who walk in afraid, just like he once was.
+        </p>
+        <p>
+          Ansh’s journey is far from over, but his progress reminds us that with timely intervention, a supportive environment, and compassionate care — every child with autism can thrive.
+        </p>
+      </div>
 
-              <div class="md:w-1/2">
-                <img src="/Trey 1.jpg" alt="try" class="w-full"/>
-              </div>
-            </div>
-            <p>
-              Now, he is back in Oklahoma and living in a residential setting
-              with three other individuals with autism. There are two support
-              people in his home, and he gets ABA therapy and horseback riding
-              therapy. That’s one of the things he likes to do. He doesn’t like
-              television—he likes to hike, walk and ride horseback. He really
-              likes people—at his old program in New England, they named him
-              mayor because he shakes everyone’s hand and loves making eye
-              contact. He could be the greeter at Walmart, but he would never
-              let go of your hand.
-            </p>
+      <div class="md:w-1/2">
+        <img src="/WhatsApp Image 2025-07-29 at 14.37.15_88417264.jpg" alt="ansh's Autism Journey" class="w-full h-fit"/>
+      </div>
+    </div>
 
-            <div class="flex flex-col gap-5 md:flex-row">
-              <div class="space-y-3 md:w-1/2">
-                <p class="text-muted-foreground text-3xl font-bold">
-                  What motivated you to get involved in the MSSNG program?
-                </p>
-
-                <p>
-                  Ever since Trey was first diagnosed, we immediately started
-                  searching to learn everything we could about autism. I set up
-                  a bunch of online alerts to send me daily updates about
-                  autism. In the beginning, it was just a broad search—what
-                  could help Trey?
-                </p>
-                <p>
-                  We tried different interventions based on our research. We
-                  learned that a lot of people with autism have been helped by
-                  eating a gluten-free diet, so we tried that for six months. At
-                  8 years old, we took him to a gastroenterologist for an
-                  endoscopy and determined that Trey does not have celiac
-                  disease, so that didn’t help him.
-                </p>
-                 <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-              </div>
-
-              <div class="md:w-1/2">
-                <img src="/Trey 3.jpg" alt="try" class="w-full"/>
-              </div>
-            </div>
-            <p>
-              Another thing we did around that age was take Trey to get a
-              24-hour electroencephalogram (EEG) to see if he had seizures. Our
-              doctors informed us that some people with autism have
-              micro-seizures that aren’t evident but cause a lot of their
-              behavioral issues and other autism characteristics. That wasn’t
-              the case for Trey either.
-            </p>`,
+    <p>
+      Dr. Rajeev Kumar’s integrative approach to autism — blending the scientific structure of therapies with the subtle healing of homeopathy — gave Ansh’s family hope when they had none. 
+    </p>
+    <p>
+      Today, they advocate for early diagnosis and support, urging other families not to delay seeking help.
+    </p>`,
     },
   },
 
-  {
-    id: 3,
-    img: "/Jordan-wearing-a-blue-collared-shirt.jpg.webp",
-    title: "Family finds answers through MSSNG",
-    link: "/our-impact",
-    desc: "When Trey M., 30, was first diagnosed with autism in 1995 at age 3, his family got straight to work finding information, therapies and supports that",
-    subtab: {
-      id: 4,
-      heading: "",
-      paragraph: ` <p class="text-muted-foreground text-3xl font-bold" >
-              Family finds answers through MSSNG
-            </p>
-            <p class="text-muted-foreground text-sm font-bold">
-              By Marta Chmielowicz
-            </p>
-            <p>
-              When Trey M., 30, was first diagnosed with autism in 1995 at age
-              3, his family got straight to work finding information, therapies
-              and supports that could help him one day live an independent life.
-              But with the Internet still in its infancy, Trey’s family had
-              limited access to information that could help their son. Instead,
-              they took a trial-and-error approach, testing for seizures and
-              dietary issues that could be the cause of their son’s biggest
-              medical challenges.
-            </p>
-            <p>
-              They did not find their answer until 2021, when they received
-              Trey’s genetic testing results through the Autism Speaks-supported
-              <strong>MSSNG program</strong>. After seven years of waiting for
-              results, they learned that Trey has Phelan-McDermid Syndrome, a
-              rare genetic condition caused by variants, or changes, in the
-              SHANK3 gene. Features of this condition can include developmental
-              and speech delays, behavioral issues, seizures and a weakened
-              ability to feel pain or sweat. It is estimated that only 1-2% of
-              people with autism have Phelan-McDermid syndrome.
-            </p>
-            <p>
-              Now at age 30, Trey lives in a residential program and sees his
-              family every weekend. He receives Applied Behavior Analysis (ABA)
-              therapy, speech therapy and equine therapy, and has fallen in love
-              with horseback riding and hiking. Thanks to the MSSNG program,
-              Trey’s family has the knowledge they need to research
-              interventions that can help Trey with his unique challenges,
-              giving them greater peace of mind as they plan for his future.
-            </p>
-            <div class="flex flex-col gap-5 md:flex-row">
-              <div class="space-y-3 md:w-1/2">
-                <p class="text-muted-foreground text-3xl font-bold">
-                  In this Q&A, Trey’s father, Jim, shares his son’s experience
-                  with the MSSNG program.
-                </p>
-                <p class="text-muted-foreground text-3xl font-bold">
-                  Can you tell me about Trey and his autism journey?
-                </p>
-                <p>
-                  Trey was diagnosed with autism around 3 years old. He had some
-                  delays at 18 months, but his speech developed until he was 4.5
-                  years old. At that point, he lost most of his words and he’s
-                  basically nonverbal now. When he was 4.5, we started doing ABA
-                  therapy at home to help with potty training, eye contact and
-                  speech. He did drills to match colors and shapes, and flash
-                  cards to learn some simple words and basic sign language.
-                </p>
-                <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-                 <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-                 <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-              </div>
+ {
+  id: 3,
+  img: "/WhatsApp Image 2025-07-29 at 14.37.17_5255f4dc.jpg",
+  title: "Sumit Journey from Silence to Strength",
+  link: "/our-impact",
+  desc: "Diagnosed at an early age, Sumit story is one of resilience, hope, and the power of personalized support.",
+  subtab: {
+    id: 4,
+    heading: "",
+    paragraph: ` 
+    <p class="text-muted-foreground text-3xl font-bold">
+      Sumit Journey from Silence to Strength
+    </p>
+    <p class="text-muted-foreground text-sm font-bold">
+      By Team Rajeev Clinic
+    </p>
+    <p>
+      When Ansh was just 2 years old, his parents noticed he wasn’t responding to his name or making eye contact. While other children his age were forming words, Ansh remained quiet, living in his own peaceful world.
+    </p>
+    <p>
+      After a formal diagnosis of autism at the age of 3, his parents were overwhelmed. They visited multiple specialists and tried various therapies but struggled to find something that truly worked for Ansh. It wasn’t until they discovered <strong>homeopathy</strong> and individualized therapies that they began seeing small, consistent progress.
+    </p>
+    <p>
+      By the age of 6, Ansh was able to communicate using picture cards. At 8, he spoke his first full sentence: “I want to go outside.” For his family, it was nothing short of a miracle.
+    </p>
+    <div class="flex flex-col gap-5 md:flex-row">
+      <div class="space-y-3 md:w-1/2">
+        <p class="text-muted-foreground text-2xl font-bold">
+          Small Steps, Big Wins
+        </p>
+        <p>
+          Ansh now enjoys painting, playing with colors, and even attends a small community school where teachers tailor education to his needs. Though mostly non-verbal, his expressions and gestures speak volumes. His classmates adore him, and his teachers often say he’s the heart of the classroom.
+        </p>
+        <p>
+          Homeopathy sessions from Dr. Rajeev’s clinic have helped manage Sumit sensory sensitivities, sleep issues, and anxiety. His parents say it has been life-changing.
+        </p>
+      </div>
+      <div class="md:w-1/2">
+        <img src="/WhatsApp Image 2025-07-29 at 14.37.17_5255f4dc.jpg" alt="Ansh painting in therapy" class="w-full rounded-xl shadow-md"/>
+      </div>
+    </div>
+    <p>
+      Today, at 10 years old, Ansh can say simple words, greet guests with a hug, and express his likes and dislikes. His favorite time of day? Watering the plants and playing with colors.
+    </p>
+    <p>
+      His mother says, “We’ve learned to celebrate the smallest of victories. For us, every smile from Ansh is a moment of joy.”
+    </p>
+    <p class="mt-4 text-green-700 font-semibold">
+      Sumit story reminds us that with the right support and lots of love, every child can bloom in their own time.
+    </p>
+    `
+  }
+}
 
-              <div class="md:w-1/2">
-                <img src="/Trey 1.jpg" alt="try" class="w-full"/>
-              </div>
-            </div>
-            <p>
-              Now, he is back in Oklahoma and living in a residential setting
-              with three other individuals with autism. There are two support
-              people in his home, and he gets ABA therapy and horseback riding
-              therapy. That’s one of the things he likes to do. He doesn’t like
-              television—he likes to hike, walk and ride horseback. He really
-              likes people—at his old program in New England, they named him
-              mayor because he shakes everyone’s hand and loves making eye
-              contact. He could be the greeter at Walmart, but he would never
-              let go of your hand.
-            </p>
-
-            <div class="flex flex-col gap-5 md:flex-row">
-              <div class="space-y-3 md:w-1/2">
-                <p class="text-muted-foreground text-3xl font-bold">
-                  What motivated you to get involved in the MSSNG program?
-                </p>
-
-                <p>
-                  Ever since Trey was first diagnosed, we immediately started
-                  searching to learn everything we could about autism. I set up
-                  a bunch of online alerts to send me daily updates about
-                  autism. In the beginning, it was just a broad search—what
-                  could help Trey?
-                </p>
-                <p>
-                  We tried different interventions based on our research. We
-                  learned that a lot of people with autism have been helped by
-                  eating a gluten-free diet, so we tried that for six months. At
-                  8 years old, we took him to a gastroenterologist for an
-                  endoscopy and determined that Trey does not have celiac
-                  disease, so that didn’t help him.
-                </p>
-                 <p>
-                  Through age 12, Trey went to public school. Then, he went to
-                  Heartspring, a school in Wichita, Kan. for kids with autism
-                  and other developmental disabilities. At age 14, he went to
-                  Melmark New England, a special education school in Andover,
-                  Mass., where he had one-on-one supervision during the day. We
-                  visited him every 8 weeks until he graduated at age 22.
-                </p>
-              </div>
-
-              <div class="md:w-1/2">
-                <img src="/Trey 3.jpg" alt="try" class="w-full"/>
-              </div>
-            </div>
-            <p>
-              Another thing we did around that age was take Trey to get a
-              24-hour electroencephalogram (EEG) to see if he had seizures. Our
-              doctors informed us that some people with autism have
-              micro-seizures that aren’t evident but cause a lot of their
-              behavioral issues and other autism characteristics. That wasn’t
-              the case for Trey either.
-            </p>`,
-    },
-  },
 ];

@@ -24,7 +24,7 @@ export default function Page() {
             individuals, families, service providers, and the community.
           </Paragraph>
           <Heading>How to contact ART</Heading>
-          <Link href={""} className="text-primary hover:underline">
+          <Link href={"/contact-us"} className="text-primary hover:underline">
             Contact us online
           </Link>
           <Paragraph>

@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 
 import Budge from "@/components/Budge";
-import CardItem from "@/components/CardItem";
 import AOSWrapper from "@/components/AOSWrapper";
 import { autismNumber } from "./lis";
 import StickyNavigation from "./StickyNavigation";
@@ -57,22 +56,7 @@ export default async function Page({
             </div>
           </div>
 
-          <div className="mx-auto max-w-7xl space-y-10 px-3 overflow-hidden">
-            {" "}
-            <p
-              className="text-muted-foreground text-center text-3xl font-bold"
-              data-aos="fade-right"
-            >
-           Autism by the Numbers resources
-            </p>
-            <div className="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3">
-              {autismNumber
-                .filter((v) => v.id !== Number(id))
-                .map((v) => (
-                  <CardItem cardDeta={v} key={v.id} />
-                ))}
-            </div>
-          </div>
+         
         </div>
       </AOSWrapper>
     </main>

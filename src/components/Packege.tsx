@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "../app/styles.css";
 import { cn } from "@/lib/utils";
 
-import packagse from "@/assets/packege.jpg";
+import packagse from "@/assets/Autism-Awareness-SS-scaled-1.jpg";
 import {
   Dialog,
   DialogContent,
@@ -29,15 +29,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import LoadingButton from "./LoadingButton";
 import Script from "next/script";
 import { PhoneInput } from "./PhoneInput";
-import { donate } from "./actions";
+import { autismpackage } from "./actions";
 
 interface PackageProps {
   opens: boolean;
   onClose: () => void;
 }
 export default function Packege({ opens, onClose }: PackageProps) {
-  const [selectedAmount, setSelectedAmount] = useState<number>(92600);
-
   const donations = [{ id: 1, price: 92600 }];
 
   const form = useForm<DonateValues>({
@@ -48,47 +46,29 @@ export default function Packege({ opens, onClose }: PackageProps) {
       phoneNumber: "",
       country: "",
       state: "",
-      amount: 92600,
+      amount: "92600",
       orderId: "",
       razorpayPaymentId: "",
       razorpaySignature: "",
     },
   });
 
+  const { setValue } = form;
+
+  const [loding, setLoding] = useState(false);
   const onSubmit = async (input: DonateValues) => {
-    const finalInpute = {
-      name: input.name as string,
-      emails: input.emails as string,
-      phoneNumber: input.phoneNumber as string,
-      country: input.country as string,
-      state: input.state as string,
-      amount: selectedAmount as number,
-    };
-    console.log(finalInpute);
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const donateData = await donate(finalInpute as any);
+      setLoding(true);
+      const donateData = await autismpackage(input);
 
-      if (donateData.orderId) {
-        const paymentData = {
-          key: process.env.NEXT_PUBLIC_RAZOR_KEY,
-          order_id: donateData.orderId,
-
-          name: "Dr.Rajeev's Autism Care",
-          description: "Sponsorship Payment",
-          image: "https://www.rajeevclinic.com/assets/images/web_logo_2.png",
-
-          theme: {
-            color: "#3399cc",
-          },
-        };
-
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const payment = new (window as any).Razorpay(paymentData);
-        payment.open();
+      if (donateData) {
+        window.location.href = donateData; // Instamojo payment page
       }
     } catch (error) {
+      setLoding(false);
       console.log(error);
+    } finally {
+      setLoding(false);
     }
   };
 
@@ -230,8 +210,13 @@ export default function Packege({ opens, onClose }: PackageProps) {
                               id={`donation-${donation.id}`}
                               name="donation"
                               value={donation.price}
-                              checked={selectedAmount === donation.price}
-                              onChange={() => setSelectedAmount(donation.price)}
+                              checked={
+                                form.watch("amount") ===
+                                donation.price.toString()
+                              }
+                              onChange={() =>
+                                setValue("amount", donation.price.toString())
+                              }
                               className="peer hidden"
                             />
                             <Label
@@ -246,7 +231,7 @@ export default function Packege({ opens, onClose }: PackageProps) {
                         ))}
                       </div>
                     </div>
-                    <LoadingButton className="w-full" loading={false}>
+                    <LoadingButton className="w-full" loading={loding}>
                       Submit
                     </LoadingButton>
                   </form>

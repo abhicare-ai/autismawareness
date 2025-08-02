@@ -58,7 +58,7 @@ export default function BannerSlider() {
         <SwiperSlide className="relative cursor-grab">
           <video
         
-            src="/WhatsApp Video 2025-07-29 at 15.30.16_a347fba1.mp4"
+            src="/vido.mp4"
             autoPlay
             // muted
             loop

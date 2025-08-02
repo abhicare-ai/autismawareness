@@ -3,6 +3,12 @@ import Link from "next/link";
 import "./styles.css"; // Optional: if you have custom CSS
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { newslator } from "./actions";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { NewLatorValue, newsLatorchema } from "@/lib/vallidation";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { toast } from "sonner";
 
 const sections = [
   {
@@ -31,6 +37,26 @@ const sections = [
 ];
 
 export default function Footer() {
+  const form = useForm<NewLatorValue>({
+    resolver: zodResolver(newsLatorchema),
+    defaultValues: {
+      emails: "",
+    },
+  });
+  const onSubmit = async (input: NewLatorValue) => {
+    const { error, message } = await newslator(input);
+
+    if (error) {
+      toast.error(error);
+    }
+
+    if (message) {
+      toast.success(message);
+      form.reset()
+    }
+
+  
+  };
   return (
     <footer className="lginBody mt-12 border border-t text-sm text-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-10 sm:grid-cols-2 md:grid-cols-3">
@@ -58,12 +84,28 @@ export default function Footer() {
           <p className="mb-2 text-sm text-gray-400">
             Subscribe to our newsletter
           </p>
-          <form className="flex flex-col gap-2">
-            <Input placeholder="Your email address" />
-          </form>
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="w-full space-y-3"
+            >
+              {/* Name Field */}
+              <FormField
+                control={form.control}
+                name="emails"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input placeholder="Enter your email" {...field} />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+            </form>
+          </Form>
           <div className="mt-4 flex gap-4 text-gray-400">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/AbhiHomeoRanchi"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -71,7 +113,7 @@ export default function Footer() {
               <Facebook />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/abhihomoeo"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
@@ -98,7 +140,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-800 py-5 text-center text-xs text-primary">
+      <div className="text-primary border-t border-gray-800 py-5 text-center text-xs">
         © {new Date().getFullYear()} Abhi Homeo Hall. All rights reserved.
       </div>
     </footer>
